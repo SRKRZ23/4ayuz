@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфолио - 4ay.uz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="preloader"><div class="preloader-logo">4ay.uz</div></div>
+  <header class="header">
+    <div class="logo">4ay.uz</div>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="services.html">Услуги</a>
+      <a href="portfolio.html">Портфолио</a>
+      <a href="about.html">О нас</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="blog.html">Блог</a>
+    </nav>
+  </header>
+
+  <section class="portfolio-page">
+    <h1>Наши проекты</h1>
+    <p class="portfolio-intro">Мы гордимся нашими проектами, которые помогли клиентам достичь новых высот в бизнесе. Вот некоторые из наших работ, демонстрирующие наш опыт в различных областях IT.</p>
+    <div class="filter">
+      <button class="filter-btn active" data-category="all">Все</button>
+      <button class="filter-btn" data-category="ai">ИИ</button>
+      <button class="filter-btn" data-category="dev">Разработка</button>
+      <button class="filter-btn" data-category="cloud">Облачные решения</button>
+      <button class="filter-btn" data-category="security">Кибербезопасность</button>
+      <button class="filter-btn" data-category="ecommerce">E-commerce</button>
+      <button class="filter-btn" data-category="iot">IoT</button>
+      <button class="filter-btn" data-category="edu">Образование</button>
+      <button class="filter-btn" data-category="blockchain">Блокчейн</button>
+      <button class="filter-btn" data-category="analytics">Аналитика</button>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-item" data-category="ai">
+        <img src="assets/project1.webp" alt="AI-Driven CRM">
+        <h2>AI-Driven CRM для ритейла</h2>
+        <p>Разработали CRM-систему с искусственным интеллектом для крупной розничной сети. Система анализирует данные клиентов и предлагает персонализированные акции, что увеличило продажи на 30% за 6 месяцев.</p>
+        <p><strong>Технологии:</strong> Python, TensorFlow, React</p>
+        <p><strong>Клиент:</strong> "MegaRetail"</p>
+      </div>
+      <div class="portfolio-item" data-category="dev">
+        <img src="assets/project2.webp" alt="Телемедицина">
+        <h2>Мобильное приложение для телемедицины</h2>
+        <p>Создано приложение для врачей и пациентов с поддержкой видеоконсультаций. Интеграция с медкартами и шифрование данных обеспечивают безопасность. Проект запущен в 3 регионах.</p>
+        <p><strong>Технологии:</strong> Flutter, Firebase, AES-256</p>
+        <p><strong>Клиент:</strong> "HealthCare"</p>
+      </div>
+      <div class="portfolio-item" data-category="cloud">
+        <img src="assets/project3.webp" alt="Логистика">
+        <h2>Облачная платформа для логистики</h2>
+        <p>Развернули масштабируемую платформу на AWS для управления цепочками поставок. Реальное время отслеживания и аналитика сократили затраты клиента на 20%.</p>
+        <p><strong>Технологии:</strong> AWS, Docker, Node.js</p>
+        <p><strong>Клиент:</strong> "LogiTrans"</p>
+      </div>
+      <div class="portfolio-item" data-category="security">
+        <img src="assets/project4.webp" alt="Кибербезопасность">
+        <h2>Система кибербезопасности для банков</h2>
+        <p>Внедрили многоуровневую защиту для финансового сектора: обнаружение угроз, защита от DDoS-атак, шифрование данных. Проект успешно прошел аудит безопасности.</p>
+        <p><strong>Технологии:</strong> Splunk, OpenSSL, Kubernetes</p>
+        <p><strong>Клиент:</strong> "BankSafe"</p>
+      </div>
+      <div class="portfolio-item" data-category="ecommerce">
+        <img src="assets/project5.webp" alt="E-commerce с AR">
+        <h2>E-commerce платформа с AR</h2>
+        <p>Онлайн-магазин с дополненной реальностью для примерки одежды и мебели. Увеличил конверсию на 15% благодаря интерактивному опыту.</p>
+        <p><strong>Технологии:</strong> Unity, Shopify, ARKit</p>
+        <p><strong>Клиент:</strong> "ShopAR"</p>
+      </div>
+      <div class="portfolio-item" data-category="ai">
+        <img src="assets/project6.webp" alt="Чат-бот">
+        <h2>Чат-бот с ИИ для техподдержки</h2>
+        <p>Интеллектуальный чат-бот для телеком-компании, который сократил нагрузку на колл-центр на 40%. Использованы NLP и интеграция с CRM.</p>
+        <p><strong>Технологии:</strong> Dialogflow, Node.js, Salesforce</p>
+        <p><strong>Клиент:</strong> "TelecomPlus"</p>
+      </div>
+      <div class="portfolio-item" data-category="iot">
+        <img src="assets/project7.webp" alt="Умный дом">
+        <h2>Система управления умным домом</h2>
+        <p>IoT-решение для управления устройствами через мобильное приложение. Поддержка голосового управления и интеграция с Alexa.</p>
+        <p><strong>Технологии:</strong> MQTT, AWS IoT, Flutter</p>
+        <p><strong>Клиент:</strong> "SmartHome"</p>
+      </div>
+      <div class="portfolio-item" data-category="edu">
+        <img src="assets/project8.webp" alt="Онлайн-обучение">
+        <h2>Платформа для онлайн-обучения</h2>
+        <p>LMS с адаптивным обучением и аналитикой прогресса студентов. Использована для обучения 5000+ пользователей в образовательной компании.</p>
+        <p><strong>Технологии:</strong> Moodle, React, PostgreSQL</p>
+        <p><strong>Клиент:</strong> "EduTech"</p>
+      </div>
+      <div class="portfolio-item" data-category="blockchain">
+        <img src="assets/project9.webp" alt="Блокчейн">
+        <h2>Блокчейн для цепочек поставок</h2>
+        <p>Решение на основе блокчейна для прозрачного отслеживания товаров. Сократило время проверки цепочки поставок на 50%.</p>
+        <p><strong>Технологии:</strong> Ethereum, Solidity, Node.js</p>
+        <p><strong>Клиент:</strong> "SupplyChainPro"</p>
+      </div>
+      <div class="portfolio-item" data-category="analytics">
+        <img src="assets/project10.webp" alt="Дашборд">
+        <h2>Аналитический дашборд для маркетинга</h2>
+        <p>Веб-приложение для анализа данных из соцсетей и рекламных кампаний с визуализацией в реальном времени. Ускорило принятие решений на 25%.</p>
+        <p><strong>Технологии:</strong> D3.js, React, Google Analytics</p>
+        <p><strong>Клиент:</strong> "MarketInsight"</p>
+      </div>
+    </div>
+
+    <div class="portfolio-testimonials">
+      <h2>Отзывы о наших проектах</h2>
+      <div class="testimonial-items">
+        <div class="testimonial-item">
+          <p>"Проект с 4ay.uz изменил наш бизнес! Их решение для логистики сэкономило нам миллионы."</p>
+          <h3>Олег Сидоров, LogiTrans</h3>
+        </div>
+        <div class="testimonial-item">
+          <p>"Чат-бот, разработанный 4ay.uz, стал настоящим спасением для нашей техподдержки."</p>
+          <h3>Екатерина Кузнецова, TelecomPlus</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-section">
+      <h3>Хотите реализовать свой проект?</h3>
+      <p>Свяжитесь с нами, и мы поможем воплотить ваши идеи в жизнь!</p>
+      <a href="contacts.html" class="hero-btn">Связаться</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="contacts">
+        <h3>Контакты</h3>
+        <p>Тел: +998 99 123 45 67</p>
+        <p>Email: info@4ay.uz</p>
+        <p>Адрес: г. Ташкент, ул. Амира Темура, 123</p>
+      </div>
+      <div class="map">
+        <iframe src="https://maps.google.com/maps?q=Ташкент&t=&z=13&ie=UTF8&iwloc=&output=embed" width="300" height="150" style="border:1px solid #D4AF37;"></iframe>
+      </div>
+    </div>
+    <div class="socials">
+      <a href="#"><img src="assets/fb.svg" alt="Facebook"></a>
+      <a href="#"><img src="assets/insta.svg" alt="Instagram"></a>
+      <a href="#"><img src="assets/telegram.svg" alt="Telegram"></a>
+    </div>
+  </footer>
+
+  <div class="chat-bot">
+    <div class="chat-icon">💬</div>
+    <div class="chat-window">
+      <div class="chat-header">Чат с 4ay</div>
+      <div class="chat-body"><p class="bot-message">Здравствуйте!</p></div>
+      <div class="chat-footer">
+        <button class="chat-option" data-response="Оставьте заявку">Заявка</button>
+        <button class="chat-option" data-response="Портфолио">Портфолио</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+ъ<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты - 4ay.uz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="preloader"><div class="preloader-logo">4ay.uz</div></div>
+  <header class="header">
+    <div class="logo">4ay.uz</div>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="services.html">Услуги</a>
+      <a href="portfolio.html">Портфолио</a>
+      <a href="about.html">О нас</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="blog.html">Блог</a>
+    </nav>
+  </header>
+
+  <section class="contacts-page">
+    <h1>Свяжитесь с нами</h1>
+    <p class="contacts-intro">Мы всегда готовы помочь вашему бизнесу. Оставьте заявку или свяжитесь с нами напрямую через удобный для вас способ!</p>
+    <div class="contact-info">
+      <h2>Наши контакты</h2>
+      <p><strong>Телефон:</strong> +998 99 123 45 67</p>
+      <p><strong>Email:</strong> info@4ay.uz</p>
+      <p><strong>Адрес:</strong> г. Ташкент, ул. Амира Темура, 123, офис 45</p>
+      <p><strong>Часы работы:</strong> Пн-Пт, 9:00–18:00</p>
+      <p><strong>Соцсети:</strong></p>
+      <div class="social-links">
+        <a href="#"><img src="assets/fb.svg" alt="Facebook"> Facebook</a>
+        <a href="#"><img src="assets/insta.svg" alt="Instagram"> Instagram</a>
+        <a href="#"><img src="assets/telegram.svg" alt="Telegram"> Telegram</a>
+      </div>
+    </div>
+    <div class="map" id="map"><iframe src="https://maps.google.com/maps?q=Ташкент&t=&z=13&ie=UTF8&iwloc=&output=embed" width="600" height="400" style="border:1px solid #D4AF37;"></iframe></div>
+    <form class="contact-form">
+      <h2>Оставить заявку</h2>
+      <p>Заполните форму ниже, и мы свяжемся с вами в течение 24 часов.</p>
+      <input type="text" placeholder="ФИО" required>
+      <input type="tel" placeholder="Телефон" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Сообщение" required></textarea>
+      <button type="submit" class="submit-btn">Отправить</button>
+    </form>
+
+    <div class="contact-faq">
+      <h2>Часто задаваемые вопросы</h2>
+      <div class="faq-item">
+        <details>
+          <summary>Как быстро вы отвечаете на заявки?</summary>
+          <p>Мы отвечаем в течение 24 часов в рабочие дни.</p>
+        </details>
+      </div>
+      <div class="faq-item">
+        <details>
+          <summary>Можно ли встретиться лично?</summary>
+          <p>Да, вы можете записаться на встречу в нашем офисе в Ташкенте.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="contacts">
+        <h3>Контакты</h3>
+        <p>Тел: +998 99 123 45 67</p>
+        <p>Email: info@4ay.uz</p>
+        <p>Адрес: г. Ташкент, ул. Амира Темура, 123</p>
+      </div>
+      <div class="map">
+        <iframe src="https://maps.google.com/maps?q=Ташкент&t=&z=13&ie=UTF8&iwloc=&output=embed" width="300" height="150" style="border:1px solid #D4AF37;"></iframe>
+      </div>
+    </div>
+    <div class="socials">
+      <a href="#"><img src="assets/fb.svg" alt="Facebook"></a>
+      <a href="#"><img src="assets/insta.svg" alt="Instagram"></a>
+      <a href="#"><img src="assets/telegram.svg" alt="Telegram"></a>
+    </div>
+  </footer>
+
+  <div class="chat-bot">
+    <div class="chat-icon">💬</div>
+    <div class="chat-window">
+      <div class="chat-header">Чат с 4ay</div>
+      <div class="chat-body"><p class="bot-message">Здравствуйте!</p></div>
+      <div class="chat-footer">
+        <button class="chat-option" data-response="Оставьте заявку">Заявка</button>
+        <button class="chat-option" data-response="Портфолио">Портфолио</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
