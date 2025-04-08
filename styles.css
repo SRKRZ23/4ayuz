@@ -5,7 +5,7 @@ body {
   color: #FFFFFF;
   line-height: 1.6;
   overflow-x: hidden;
-  font-size: 16px; /* Базовый размер шрифта */
+  font-size: 16px;
 }
 
 .preloader {
@@ -28,7 +28,7 @@ body {
 }
 
 .preloader-logo {
-  font-size: clamp(30px, 5vw, 40px); /* Масштабируемый размер шрифта */
+  font-size: clamp(30px, 5vw, 40px);
   font-weight: bold;
   color: #FFFFFF;
   text-shadow: 0 0 1px #D4AF37;
@@ -42,12 +42,12 @@ body {
 }
 
 .header {
-  height: clamp(50px, 8vh, 60px); /* Масштабируемая высота */
+  height: clamp(40px, 6vh, 50px); /* Уменьшена высота */
   background: linear-gradient(90deg, #1A2A44 0%, #D4AF37 50%, #1A2A44 100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 clamp(20px, 5vw, 50px); /* Масштабируемые отступы */
+  padding: 0 clamp(10px, 3vw, 30px); /* Уменьшены отступы */
   position: fixed;
   width: 100%;
   top: 0;
@@ -61,7 +61,7 @@ body {
 }
 
 .logo img {
-  width: clamp(100px, 20vw, 120px); /* Масштабируемый размер логотипа */
+  width: clamp(80px, 15vw, 100px); /* Уменьшен размер логотипа */
   height: auto;
 }
 
@@ -72,9 +72,9 @@ nav {
 
 nav a {
   color: #FFFFFF;
-  font-size: clamp(12px, 2vw, 14px); /* Масштабируемый размер шрифта */
+  font-size: clamp(10px, 1.8vw, 14px); /* Уменьшен шрифт */
   font-weight: 500;
-  margin-right: clamp(10px, 2vw, 20px);
+  margin-right: clamp(8px, 1.5vw, 15px); /* Уменьшены отступы */
   text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -85,9 +85,9 @@ nav a:hover {
 }
 
 .hero, .about-hero, .portfolio-hero {
-  height: clamp(250px, 50vh, 400px); /* Масштабируемая высота */
+  height: clamp(250px, 50vh, 400px);
   text-align: center;
-  padding-top: clamp(80px, 15vh, 100px);
+  padding-top: clamp(60px, 12vh, 100px);
   padding-bottom: 0;
   background: url('assets/hero-bg.jpg') no-repeat center;
   background-size: cover;
@@ -107,7 +107,7 @@ nav a:hover {
 }
 
 .hero h1, .about-hero h1, .portfolio-hero h1 {
-  font-size: clamp(32px, 6vw, 48px); /* Масштабируемый размер шрифта */
+  font-size: clamp(24px, 5vw, 48px);
   font-weight: bold;
   margin: 0;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -116,7 +116,7 @@ nav a:hover {
 }
 
 .hero p, .about-hero p, .portfolio-hero p {
-  font-size: clamp(16px, 3vw, 18px);
+  font-size: clamp(14px, 2.5vw, 18px);
   color: #B0B0B0;
   margin: 20px 0;
   position: relative;
@@ -129,7 +129,7 @@ nav a:hover {
 
 .hero-btn {
   width: clamp(150px, 30vw, 200px);
-  height: clamp(50px, 10vh, 60px);
+  height: clamp(40px, 8vh, 50px);
   background: #D4AF37;
   color: #FFFFFF;
   border: none;
@@ -153,25 +153,25 @@ nav a:hover {
 }
 
 .intro, .quick-services, .testimonials, .portfolio-testimonials, .subscribe-section, .services-page, .portfolio-page, .about-page, .contacts-page, .blog-section {
-  padding: 0 clamp(20px, 5vw, 50px) clamp(40px, 10vh, 80px);
+  padding: 0 clamp(15px, 4vw, 50px) clamp(30px, 8vh, 80px);
   text-align: center;
 }
 
 .services-page h1 {
-  margin-top: clamp(60px, 15vh, 80px);
+  margin-top: clamp(50px, 12vh, 80px);
 }
 
 .intro h2, .quick-services h2, .testimonials h2, .portfolio-testimonials h2, .subscribe-section h2, .services-page h1, .portfolio-page h1, .about-page h1, .contacts-page h1, .blog-section h1 {
-  font-size: clamp(28px, 5vw, 40px);
+  font-size: clamp(24px, 4vw, 40px);
   font-weight: bold;
   color: #FFFFFF;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   position: relative;
 }
 
 .intro h2::after, .quick-services h2::after, .testimonials h2::after, .portfolio-testimonials h2::after, .subscribe-section h2::after, .services-page h1::after, .portfolio-page h1::after, .about-page h1::after, .contacts-page h1::after, .blog-section h1::after {
   content: '';
-  width: clamp(40px, 5vw, 50px);
+  width: clamp(30px, 4vw, 50px);
   height: 2px;
   background: #D4AF37;
   position: absolute;
@@ -181,26 +181,26 @@ nav a:hover {
 }
 
 .intro p, .services-intro, .portfolio-intro, .blog-intro, .contacts-intro, .about-text {
-  font-size: clamp(14px, 2.5vw, 18px);
+  font-size: clamp(14px, 2vw, 18px);
   color: #B0B0B0;
   max-width: 800px;
-  margin: 0 auto 40px;
+  margin: 0 auto 30px;
 }
 
 .intro-benefits, .values {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: clamp(20px, 3vw, 30px);
+  gap: clamp(15px, 2vw, 30px);
   flex-wrap: wrap;
 }
 
 .benefit-item, .value-item {
-  width: clamp(250px, 40vw, 300px);
-  height: clamp(250px, 40vw, 300px);
+  width: clamp(250px, 35vw, 300px);
+  height: clamp(250px, 35vw, 300px);
   text-align: center;
   background: #2E3B55;
-  padding: clamp(15px, 3vw, 20px);
+  padding: clamp(15px, 2vw, 20px);
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -212,44 +212,42 @@ nav a:hover {
 }
 
 .benefit-item img, .value-item img {
-  width: clamp(50px, 10vw, 60px);
-  height: clamp(50px, 10vw, 60px);
+  width: clamp(50px, 8vw, 60px);
+  height: clamp(50px, 8vw, 60px);
   margin-bottom: 15px;
   border-radius: 50%;
   background: #D4AF37;
   padding: 10px;
-  display: block;
   object-fit: contain;
-  visibility: visible;
 }
 
 .benefit-item h3, .value-item h3 {
-  font-size: clamp(20px, 4vw, 24px);
+  font-size: clamp(18px, 3vw, 24px);
   color: #D4AF37;
   margin-bottom: 15px;
 }
 
 .benefit-item p, .value-item p {
-  font-size: clamp(14px, 2.5vw, 16px);
+  font-size: clamp(12px, 2vw, 16px);
   color: #B0B0B0;
 }
 
 .quick-services .carousel {
   display: flex;
   justify-content: center;
-  gap: clamp(15px, 3vw, 20px);
+  gap: clamp(10px, 2vw, 20px);
   flex-wrap: wrap;
 }
 
 .carousel-item {
-  width: clamp(250px, 40vw, 300px);
-  height: clamp(150px, 30vw, 200px);
+  width: clamp(200px, 35vw, 300px);
+  height: clamp(120px, 25vw, 200px);
   background: #2E3B55;
   color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(16px, 3vw, 20px);
+  font-size: clamp(14px, 2.5vw, 20px);
   font-weight: 500;
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -267,10 +265,10 @@ nav a:hover {
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
-  width: clamp(150px, 30vw, 200px);
+  width: clamp(150px, 25vw, 200px);
   background: #2E3B55;
   color: #FFFFFF;
-  font-size: clamp(12px, 2vw, 14px);
+  font-size: clamp(10px, 1.8vw, 14px);
   padding: 10px;
   border-radius: 6px;
   text-align: center;
@@ -285,15 +283,15 @@ nav a:hover {
 
 .see-all-btn {
   display: inline-block;
-  margin-top: clamp(30px, 5vh, 50px);
-  padding: clamp(8px, 2vw, 10px) clamp(15px, 3vw, 20px);
+  margin-top: clamp(20px, 4vh, 50px);
+  padding: clamp(8px, 1.5vw, 10px) clamp(15px, 2vw, 20px);
   background: #D4AF37;
   color: #FFFFFF;
   text-decoration: none;
   border-radius: 8px;
   transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
   font-weight: 500;
-  font-size: clamp(14px, 2.5vw, 16px);
+  font-size: clamp(12px, 2vw, 16px);
 }
 
 .see-all-btn:hover {
@@ -304,37 +302,36 @@ nav a:hover {
 
 .testimonials, .portfolio-testimonials, .about-testimonials {
   background: #2E3B55;
-  padding: clamp(30px, 5vw, 50px);
-  margin-top: clamp(30px, 5vh, 50px);
-  margin-bottom: clamp(60px, 10vh, 100px); /* Добавляем отступ снизу */
+  padding: clamp(20px, 4vw, 50px);
+  margin-top: clamp(20px, 4vh, 50px);
+  margin-bottom: clamp(40px, 8vh, 100px);
   border-radius: 12px;
   min-height: 200px;
 }
 
 .portfolio-testimonials {
-  margin-top: clamp(60px, 10vh, 100px);
+  margin-top: clamp(40px, 8vh, 100px);
 }
 
 .testimonial-items {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: clamp(20px, 3vw, 30px);
+  gap: clamp(15px, 2vw, 30px);
   flex-wrap: wrap;
 }
 
 .testimonial-item {
-  width: clamp(300px, 45vw, 350px);
-  height: clamp(200px, 35vw, 250px);
+  width: clamp(250px, 40vw, 350px);
+  height: clamp(180px, 30vw, 250px);
   background: #1A2A44;
-  padding: clamp(15px, 3vw, 20px);
+  padding: clamp(10px, 2vw, 20px);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
 }
 
 .testimonial-item:hover {
@@ -343,7 +340,7 @@ nav a:hover {
 }
 
 .testimonial-item p {
-  font-size: clamp(14px, 2.5vw, 16px);
+  font-size: clamp(12px, 2vw, 16px);
   color: #B0B0B0;
   margin-bottom: 15px;
   flex: 1;
@@ -356,56 +353,23 @@ nav a:hover {
 }
 
 .testimonial-item h3 {
-  font-size: clamp(16px, 3vw, 18px);
+  font-size: clamp(14px, 2.5vw, 18px);
   color: #FFFFFF;
   margin-top: auto;
   text-align: center;
 }
 
 .about-testimonials .testimonial-item {
-  width: clamp(300px, 45vw, 350px);
-  height: clamp(200px, 35vw, 250px);
-  background: #1A2A44;
-  padding: clamp(15px, 3vw, 20px);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.about-testimonials .testimonial-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.about-testimonials .testimonial-item p {
-  font-size: clamp(14px, 2.5vw, 16px);
-  color: #B0B0B0;
-  margin-bottom: 15px;
-  flex: 1;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  line-clamp: 4;
-}
-
-.about-testimonials .testimonial-item h3 {
-  font-size: clamp(16px, 3vw, 18px);
-  color: #FFFFFF;
-  margin-top: auto;
-  text-align: center;
+  width: clamp(250px, 40vw, 350px);
+  height: clamp(180px, 30vw, 250px);
 }
 
 .cta-section {
-  padding: clamp(30px, 5vw, 50px);
+  padding: clamp(20px, 4vw, 50px);
   text-align: center;
   background: #2E3B55;
   border-radius: 12px;
-  margin: clamp(30px, 5vh, 50px);
+  margin: clamp(20px, 4vh, 50px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -416,42 +380,42 @@ nav a:hover {
 }
 
 .cta-section h2 {
-  font-size: clamp(28px, 5vw, 40px);
+  font-size: clamp(24px, 4vw, 40px);
   font-weight: bold;
   color: #FFFFFF;
   margin-bottom: 20px;
 }
 
 .cta-section h3 {
-  font-size: clamp(24px, 4vw, 32px);
+  font-size: clamp(20px, 3.5vw, 32px);
   font-weight: bold;
   color: #FFFFFF;
   margin-bottom: 20px;
 }
 
 .cta-section p {
-  font-size: clamp(14px, 2.5vw, 18px);
+  font-size: clamp(12px, 2vw, 18px);
   color: #B0B0B0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .cta-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
   max-width: 600px;
   margin: 0 auto;
 }
 
 .form-input, .form-select {
   width: 100%;
-  max-width: clamp(300px, 80vw, 500px);
-  height: clamp(50px, 10vh, 60px);
+  max-width: clamp(250px, 70vw, 500px);
+  height: clamp(40px, 8vh, 50px);
   border-radius: 8px;
   border: none;
-  padding: 0 20px;
-  font-size: clamp(14px, 2.5vw, 16px);
+  padding: 0 15px;
+  font-size: clamp(12px, 2vw, 16px);
   background: #1A2A44;
   color: #FFFFFF;
   transition: border 0.3s ease, box-shadow 0.3s ease;
@@ -465,9 +429,7 @@ nav a:hover {
 
 .form-select {
   appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background: #1A2A44 url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 20px center;
+  background: #1A2A44 url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 15px center;
 }
 
 .form-input::placeholder {
@@ -478,31 +440,24 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: clamp(20px, 3vw, 30px);
+  gap: clamp(15px, 2vw, 30px);
   flex-wrap: wrap;
 }
 
 .service-item, .portfolio-item, .team-member, .certificate-item, .award-item, .stat-item, .blog-item {
-  width: clamp(300px, 45vw, 350px);
+  width: clamp(250px, 40vw, 350px);
   background: #2E3B55;
-  padding: clamp(15px, 3vw, 20px);
+  padding: clamp(10px, 2vw, 20px);
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  position: relative;
 }
 
 .service-item {
-  min-height: clamp(350px, 60vw, 400px);
+  min-height: clamp(300px, 50vw, 400px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.service-content {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
 }
 
 .service-item:hover, .portfolio-item:hover, .team-member:hover, .certificate-item:hover, .award-item:hover, .stat-item:hover, .blog-item:hover {
@@ -511,36 +466,32 @@ nav a:hover {
 }
 
 .service-item h2, .portfolio-item h2, .team-member h3, .certificate-item p, .award-item p, .blog-item h3 {
-  font-size: clamp(16px, 3vw, 20px);
+  font-size: clamp(16px, 2.5vw, 20px);
   color: #FFFFFF;
   margin-bottom: 15px;
-  flex: 0 0 auto;
 }
 
 .service-item p, .portfolio-item p, .team-member p, .blog-item p {
-  font-size: clamp(14px, 2.5vw, 16px);
+  font-size: clamp(12px, 2vw, 16px);
   color: #B0B0B0;
   margin-bottom: 15px;
-  flex: 0 0 auto;
-  line-height: 1.5;
 }
 
 .service-item ul {
   list-style: none;
   padding: 0;
   margin: 15px 0;
-  flex: 0 0 auto;
 }
 
 .service-item ul li {
-  font-size: clamp(12px, 2vw, 14px);
+  font-size: clamp(12px, 1.8vw, 14px);
   color: #B0B0B0;
   margin-bottom: 10px;
 }
 
 .order-btn {
   width: clamp(100px, 20vw, 120px);
-  height: clamp(35px, 8vh, 40px);
+  height: clamp(30px, 6vh, 40px);
   background: #D4AF37;
   color: #FFFFFF;
   border: none;
@@ -549,7 +500,7 @@ nav a:hover {
   transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
   align-self: center;
   margin-top: auto;
-  font-size: clamp(14px, 2.5vw, 16px);
+  font-size: clamp(12px, 2vw, 14px);
   font-weight: 500;
 }
 
@@ -560,34 +511,16 @@ nav a:hover {
 }
 
 .portfolio-item {
-  min-height: clamp(400px, 70vw, 450px);
+  min-height: clamp(350px, 60vw, 450px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
-}
-
-.portfolio-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(212, 175, 55, 0.1);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.portfolio-item:hover::before {
-  opacity: 1;
 }
 
 .portfolio-item img {
   width: 100%;
-  height: clamp(150px, 30vw, 200px);
+  height: clamp(120px, 25vw, 200px);
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 15px;
@@ -604,23 +537,9 @@ nav a:hover {
   flex: 1;
 }
 
-.portfolio-content h2 {
-  font-size: clamp(16px, 3vw, 20px);
-  color: #FFFFFF;
-  margin-bottom: 10px;
-  flex: 0 0 auto;
-}
-
-.portfolio-content p {
-  font-size: clamp(14px, 2.5vw, 16px);
-  color: #B0B0B0;
-  flex: 1;
-  margin-bottom: 15px;
-}
-
 .portfolio-btn {
   width: clamp(100px, 20vw, 120px);
-  height: clamp(35px, 8vh, 40px);
+  height: clamp(30px, 6vh, 40px);
   background: #D4AF37;
   color: #FFFFFF;
   border: none;
@@ -628,8 +547,7 @@ nav a:hover {
   cursor: pointer;
   transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
   align-self: center;
-  font-size: clamp(12px, 2vw, 14px);
-  font-weight: 500;
+  font-size: clamp(12px, 1.8vw, 14px);
 }
 
 .portfolio-btn:hover {
@@ -639,23 +557,23 @@ nav a:hover {
 }
 
 .filter {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: center;
-  gap: clamp(10px, 2vw, 15px);
+  gap: clamp(8px, 1.5vw, 15px);
   flex-wrap: wrap;
 }
 
 .filter-btn {
-  width: clamp(100px, 20vw, 120px);
-  height: clamp(35px, 8vh, 40px);
+  width: clamp(90px, 18vw, 120px);
+  height: clamp(30px, 6vh, 40px);
   background: #1A2A44;
   color: #FFFFFF;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  font-size: clamp(12px, 2vw, 14px);
+  font-size: clamp(11px, 1.8vw, 14px);
   font-weight: 500;
 }
 
@@ -685,21 +603,20 @@ nav a:hover {
 }
 
 .modal-content {
-  width: clamp(300px, 90vw, 800px);
+  width: clamp(300px, 85vw, 800px);
   max-height: 80vh;
   background: #2E3B55;
-  padding: clamp(20px, 5vw, 30px);
+  padding: clamp(15px, 3vw, 30px);
   border-radius: 12px;
-  position: relative;
   overflow-y: auto;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .modal-close {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: clamp(24px, 5vw, 30px);
+  top: 10px;
+  right: 10px;
+  font-size: clamp(20px, 4vw, 30px);
   color: #FFFFFF;
   cursor: pointer;
   transition: color 0.3s ease, transform 0.3s ease;
@@ -712,20 +629,20 @@ nav a:hover {
 
 .modal-image {
   width: 100%;
-  height: clamp(200px, 40vw, 300px);
+  height: clamp(150px, 35vw, 300px);
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .modal-title {
-  font-size: clamp(20px, 4vw, 28px);
+  font-size: clamp(18px, 3vw, 28px);
   color: #FFFFFF;
   margin-bottom: 15px;
 }
 
 .modal-description {
-  font-size: clamp(14px, 2.5vw, 16px);
+  font-size: clamp(12px, 2vw, 16px);
   color: #B0B0B0;
   line-height: 1.6;
 }
@@ -736,16 +653,15 @@ nav a:hover {
 }
 
 .about-details h2 {
-  font-size: clamp(24px, 4vw, 32px);
+  font-size: clamp(20px, 3.5vw, 32px);
   color: #D4AF37;
-  margin: clamp(30px, 5vh, 40px) 0 20px;
+  margin: clamp(20px, 4vh, 40px) 0 20px;
   text-align: center;
-  position: relative;
 }
 
 .about-details h2::after {
   content: '';
-  width: clamp(40px, 5vw, 50px);
+  width: clamp(30px, 4vw, 50px);
   height: 2px;
   background: #D4AF37;
   position: absolute;
@@ -755,183 +671,102 @@ nav a:hover {
 }
 
 .about-details p {
-  font-size: clamp(14px, 2.5vw, 16px);
+  font-size: clamp(12px, 2vw, 16px);
   color: #B0B0B0;
   max-width: 800px;
   margin: 0 auto 20px;
 }
 
 .about-history, .about-mission, .about-vision, .about-stats, .about-team, .about-values, .about-awards, .about-certificates, .about-testimonials {
-  padding: clamp(30px, 5vh, 50px) 0;
+  padding: clamp(20px, 4vh, 50px) 0;
 }
 
 .about-history, .about-mission, .about-vision {
   background: #2E3B55;
   border-radius: 12px;
-  padding: clamp(30px, 5vw, 50px);
+  padding: clamp(20px, 4vw, 50px);
 }
 
 .about-history img, .about-mission img, .about-vision img {
   width: 100%;
-  max-width: clamp(600px, 90vw, 800px);
-  height: clamp(300px, 50vw, 400px);
+  max-width: clamp(500px, 85vw, 800px);
+  height: clamp(250px, 45vw, 400px);
   object-fit: cover;
   margin: 20px auto;
   display: block;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.about-history img:hover, .about-mission img:hover, .about-vision img:hover {
-  transform: scale(1.02);
-}
-
-.about-stats .stats {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: clamp(15px, 3vw, 20px);
-  flex-wrap: wrap;
 }
 
 .about-stats .stat-item {
-  width: clamp(150px, 30vw, 200px);
-  height: clamp(100px, 20vw, 120px);
+  width: clamp(120px, 25vw, 200px);
+  height: clamp(80px, 15vw, 120px);
   background: #2E3B55;
   color: #FFFFFF;
-  font-size: clamp(14px, 2.5vw, 16px);
+  font-size: clamp(12px, 2vw, 16px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-stats .stat-number {
-  font-size: clamp(30px, 5vw, 40px);
+  font-size: clamp(24px, 4vw, 40px);
   color: #D4AF37;
   margin-bottom: 10px;
 }
 
-.team {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: clamp(20px, 3vw, 30px);
-  flex-wrap: wrap;
-}
-
 .team-member {
-  width: clamp(300px, 45vw, 350px);
-  height: clamp(300px, 50vw, 350px);
+  width: clamp(250px, 40vw, 350px);
+  height: clamp(250px, 45vw, 350px);
   text-align: center;
   background: #1A2A44;
-  padding: clamp(15px, 3vw, 20px);
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.team-member:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .team-member img {
-  width: clamp(150px, 30vw, 200px);
-  height: clamp(150px, 30vw, 200px);
+  width: clamp(120px, 25vw, 200px);
+  height: clamp(120px, 25vw, 200px);
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
   border: 3px solid #D4AF37;
-  transition: transform 0.3s ease;
-}
-
-.team-member:hover img {
-  transform: scale(1.05);
-}
-
-.team-member h3 {
-  font-size: clamp(16px, 3vw, 20px);
-  color: #D4AF37;
-  margin-bottom: 5px;
-}
-
-.team-member p {
-  font-size: clamp(14px, 2.5vw, 16px);
-  color: #B0B0B0;
-}
-
-.awards, .certificate-items {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: clamp(20px, 3vw, 30px);
-  flex-wrap: wrap;
 }
 
 .award-item, .certificate-item {
-  width: clamp(150px, 30vw, 200px);
-  height: clamp(150px, 30vw, 200px);
+  width: clamp(120px, 25vw, 200px);
+  height: clamp(120px, 25vw, 200px);
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #2E3B55;
-  padding: clamp(15px, 3vw, 20px);
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .award-item img, .certificate-item img {
-  width: clamp(80px, 15vw, 100px);
-  height: clamp(80px, 15vw, 100px);
+  width: clamp(70px, 12vw, 100px);
+  height: clamp(70px, 12vw, 100px);
   margin-bottom: 15px;
   border-radius: 50%;
   border: 2px solid #D4AF37;
-  transition: transform 0.3s ease;
-}
-
-.award-item img:hover, .certificate-item img:hover {
-  transform: scale(1.1);
-}
-
-.award-item p, .certificate-item p {
-  font-size: clamp(14px, 2.5vw, 16px);
-  color: #B0B0B0;
 }
 
 .faq-section, .contact-faq {
   background: #2E3B55;
-  padding: clamp(30px, 5vw, 50px);
+  padding: clamp(20px, 4vw, 50px);
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contact-faq:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.faq-section h2, .contact-faq h2 {
-  font-size: clamp(28px, 5vw, 40px);
+.contact-faq h2 {
+  font-size: clamp(24px, 4vw, 40px);
   font-weight: bold;
   color: #FFFFFF;
-  margin-bottom: 40px;
-  position: relative;
+  margin-bottom: 30px;
 }
 
 .contact-faq h2::after {
   content: '';
-  width: clamp(40px, 5vw, 50px);
+  width: clamp(30px, 4vw, 50px);
   height: 2px;
   background: #D4AF37;
   position: absolute;
@@ -941,26 +776,19 @@ nav a:hover {
 }
 
 .faq-item {
-  max-width: clamp(600px, 90vw, 800px);
-  margin: 0 auto 20px;
+  max-width: clamp(500px, 85vw, 800px);
+  margin: 0 auto 15px;
   text-align: left;
   background: #1A2A44;
   border-radius: 8px;
   padding: 10px;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.faq-item:hover {
-  background: #3E4B65;
-  transform: translateY(-2px);
 }
 
 .faq-item summary {
-  font-size: clamp(16px, 3vw, 18px);
+  font-size: clamp(14px, 2.5vw, 18px);
   color: #FFFFFF;
   padding: 10px;
   cursor: pointer;
-  transition: color 0.3s ease;
 }
 
 .faq-item summary:hover {
@@ -968,80 +796,49 @@ nav a:hover {
 }
 
 .faq-item p {
-  font-size: clamp(14px, 2.5vw, 16px);
+  font-size: clamp(12px, 2vw, 16px);
   color: #B0B0B0;
   padding: 10px;
 }
 
 .contact-form {
   background: #2E3B55;
-  padding: clamp(20px, 5vw, 30px);
+  padding: clamp(15px, 3vw, 30px);
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  max-width: clamp(400px, 90vw, 600px);
-  margin: 0 auto 40px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contact-form:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  max-width: clamp(350px, 85vw, 600px);
+  margin: 0 auto 30px;
 }
 
 .contact-form h2 {
-  font-size: clamp(20px, 4vw, 24px);
+  font-size: clamp(18px, 3vw, 24px);
   color: #D4AF37;
   margin-bottom: 20px;
-  text-align: center;
-  position: relative;
-}
-
-.contact-form h2::after {
-  content: '';
-  width: clamp(20px, 5vw, 30px);
-  height: 2px;
-  background: #D4AF37;
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .contact-form form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
-.form-input, .form-input[type="text"], .form-input[type="email"], .contact-form textarea {
+.form-input, .contact-form textarea {
   width: 100%;
   border-radius: 8px;
   border: 2px solid #1A2A44;
-  padding: 15px;
-  font-size: clamp(14px, 2.5vw, 16px);
+  padding: 12px;
+  font-size: clamp(12px, 2vw, 16px);
   background: #1A2A44;
   color: #FFFFFF;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-form textarea {
-  height: clamp(120px, 20vh, 150px);
+  height: clamp(100px, 18vh, 150px);
   resize: none;
 }
 
-.form-input:focus, .contact-form textarea:focus {
-  outline: none;
-  border: 2px solid #D4AF37;
-  box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
-}
-
-.form-input::placeholder, .contact-form textarea::placeholder {
-  color: #B0B0B0;
-}
-
 .submit-btn {
-  width: clamp(150px, 30vw, 200px);
-  height: clamp(40px, 8vh, 50px);
+  width: clamp(120px, 25vw, 200px);
+  height: clamp(35px, 7vh, 50px);
   background: #D4AF37;
   color: #FFFFFF;
   border: none;
@@ -1050,7 +847,7 @@ nav a:hover {
   font-weight: 500;
   align-self: center;
   cursor: pointer;
-  font-size: clamp(14px, 2.5vw, 16px);
+  font-size: clamp(12px, 2vw, 16px);
 }
 
 .submit-btn:hover {
@@ -1062,8 +859,8 @@ nav a:hover {
 .social-links {
   display: flex;
   justify-content: center;
-  gap: clamp(20px, 3vw, 30px);
-  margin: clamp(30px, 5vh, 40px) 0;
+  gap: clamp(15px, 2vw, 30px);
+  margin: clamp(20px, 4vh, 40px) 0;
 }
 
 .social-links a {
@@ -1071,126 +868,58 @@ nav a:hover {
   align-items: center;
   color: #D4AF37;
   text-decoration: none;
-  font-size: clamp(16px, 3vw, 18px);
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.social-links a:hover {
-  color: #E4C567;
-  transform: translateY(-2px);
+  font-size: clamp(14px, 2.5vw, 18px);
 }
 
 .social-links img {
-  width: clamp(25px, 5vw, 30px);
-  height: clamp(25px, 5vw, 30px);
+  width: clamp(20px, 4vw, 30px);
+  height: clamp(20px, 4vw, 30px);
   margin-right: 10px;
   background: #2E3B55;
   border-radius: 50%;
   padding: 5px;
-  transition: transform 0.3s ease;
-}
-
-.social-links a:hover img {
-  transform: rotate(360deg);
-}
-
-.subscribe-section {
-  padding: clamp(30px, 5vw, 50px);
-  text-align: center;
-}
-
-.subscribe-section h2 {
-  font-size: clamp(28px, 5vw, 40px);
-  font-weight: bold;
-  color: #FFFFFF;
-  margin-bottom: 40px;
 }
 
 .subscribe-form {
   display: flex;
   justify-content: center;
-  gap: clamp(15px, 3vw, 20px);
+  gap: clamp(10px, 2vw, 20px);
   margin-top: 20px;
   flex-wrap: wrap;
 }
 
-.subscribe-form input, .contact-form input, .contact-form textarea {
-  width: clamp(250px, 80vw, 300px);
-  height: clamp(40px, 8vh, 50px);
+.subscribe-form input {
+  width: clamp(200px, 70vw, 300px);
+  height: clamp(35px, 7vh, 50px);
   border-radius: 8px;
   border: none;
   padding: 0 15px;
-  font-size: clamp(14px, 2.5vw, 16px);
+  font-size: clamp(12px, 2vw, 16px);
   background: #1A2A44;
   color: #FFFFFF;
-  transition: border 0.3s ease, box-shadow 0.3s ease;
-}
-
-.subscribe-form input:focus, .contact-form input:focus, .contact-form textarea:focus {
-  outline: none;
-  border: 2px solid #D4AF37;
-  box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
-}
-
-.contact-form textarea {
-  height: clamp(120px, 20vh, 150px);
-  padding: 15px;
-}
-
-.submit-btn {
-  width: clamp(150px, 30vw, 200px);
-  height: clamp(40px, 8vh, 50px);
-  background: #D4AF37;
-  color: #FFFFFF;
-  border: none;
-  border-radius: 8px;
-  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
-  font-weight: 500;
-  font-size: clamp(14px, 2.5vw, 16px);
-}
-
-.submit-btn:hover {
-  transform: scale(1.05);
-  background: #E4C567;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
 .blog-posts {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: clamp(20px, 3vw, 30px);
+  gap: clamp(15px, 2vw, 30px);
   flex-wrap: wrap;
 }
 
 .blog-item {
-  width: clamp(300px, 45vw, 350px);
-  height: clamp(200px, 35vw, 250px);
+  width: clamp(250px, 40vw, 350px);
+  height: clamp(180px, 30vw, 250px);
   background: #2E3B55;
-  padding: clamp(15px, 3vw, 20px);
+  padding: clamp(10px, 2vw, 20px);
   border-radius: 12px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.blog-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.blog-item h3 {
-  font-size: clamp(16px, 3vw, 20px);
-  color: #FFFFFF;
-  margin-bottom: 10px;
 }
 
 .blog-item p {
-  font-size: clamp(14px, 2.5vw, 16px);
-  color: #B0B0B0;
   flex: 1;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1201,7 +930,7 @@ nav a:hover {
 }
 
 .footer {
-  padding: clamp(30px, 5vw, 50px);
+  padding: clamp(20px, 4vw, 50px);
   background: #1A2A44;
   text-align: center;
 }
@@ -1213,7 +942,7 @@ nav a:hover {
   max-width: clamp(800px, 90vw, 1200px);
   margin: 0 auto;
   flex-wrap: wrap;
-  gap: clamp(15px, 3vw, 20px);
+  gap: clamp(10px, 2vw, 20px);
 }
 
 .footer .contacts {
@@ -1221,29 +950,24 @@ nav a:hover {
 }
 
 .footer .contacts h3 {
-  font-size: clamp(16px, 3vw, 20px);
+  font-size: clamp(14px, 2.5vw, 20px);
   color: #D4AF37;
   margin-bottom: 15px;
 }
 
 .footer .contacts p {
-  font-size: clamp(14px, 2.5vw, 16px);
+  font-size: clamp(12px, 2vw, 16px);
   color: #FFFFFF;
   margin: 5px 0;
 }
 
-.footer .map {
-  text-align: right;
-}
-
 .footer .map iframe {
-  width: clamp(250px, 50vw, 300px);
-  height: clamp(120px, 25vw, 150px);
-  border: 1px solid #D4AF37;
+  width: clamp(200px, 45vw, 300px);
+  height: clamp(100px, 20vw, 150px);
 }
 
 .footer .socials {
-  margin-top: clamp(20px, 5vh, 30px);
+  margin-top: clamp(15px, 3vh, 30px);
 }
 
 .social-link {
@@ -1255,30 +979,18 @@ nav a:hover {
 
 .social-text {
   display: none;
-  font-size: clamp(12px, 2vw, 14px);
+  font-size: clamp(12px, 1.8vw, 14px);
   color: #D4AF37;
   margin-left: 5px;
 }
 
-.social-link img[style*="display: none"] + .social-text {
-  display: inline;
-}
-
 .footer .socials img {
-  width: clamp(25px, 5vw, 30px);
-  height: clamp(25px, 5vw, 30px);
+  width: clamp(20px, 4vw, 30px);
+  height: clamp(20px, 4vw, 30px);
   margin: 0 clamp(5px, 1vw, 10px);
-  transition: transform 0.3s ease;
-  display: inline-block;
-  object-fit: contain;
-  vertical-align: middle;
   background: #2E3B55;
   border-radius: 50%;
   padding: 5px;
-}
-
-.footer .socials img:hover {
-  transform: rotate(360deg);
 }
 
 .chat-bot {
@@ -1289,32 +1001,26 @@ nav a:hover {
 }
 
 .chat-icon {
-  width: clamp(40px, 8vw, 50px);
-  height: clamp(40px, 8vw, 50px);
+  width: clamp(35px, 7vw, 50px);
+  height: clamp(35px, 7vw, 50px);
   background: #D4AF37;
   color: #FFFFFF;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(20px, 4vw, 24px);
+  font-size: clamp(18px, 3.5vw, 24px);
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.chat-icon:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
 
 .chat-window {
-  width: clamp(250px, 80vw, 300px);
-  height: clamp(350px, 60vh, 400px);
+  width: clamp(200px, 70vw, 300px);
+  height: clamp(300px, 50vh, 400px);
   background: #2E3B55;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   position: absolute;
-  bottom: clamp(60px, 10vh, 70px);
+  bottom: clamp(50px, 9vh, 70px);
   right: 0;
   display: none;
   flex-direction: column;
@@ -1323,7 +1029,7 @@ nav a:hover {
 .chat-header {
   background: #1A2A44;
   color: #FFFFFF;
-  font-size: clamp(14px, 2.5vw, 16px);
+  font-size: clamp(12px, 2vw, 16px);
   padding: 10px;
   border-radius: 8px 8px 0 0;
   text-align: center;
@@ -1331,16 +1037,16 @@ nav a:hover {
 
 .chat-body {
   flex-grow: 1;
-  padding: 15px;
+  padding: 10px;
   overflow-y: auto;
   color: #B0B0B0;
-  font-size: clamp(12px, 2vw, 14px);
+  font-size: clamp(12px, 1.8vw, 14px);
 }
 
 .bot-message {
   background: #D4AF37;
   color: #1A2A44;
-  padding: 10px;
+  padding: 8px;
   border-radius: 6px;
   margin-bottom: 10px;
   max-width: 80%;
@@ -1354,15 +1060,14 @@ nav a:hover {
 }
 
 .chat-option {
-  width: clamp(70px, 15vw, 80px);
+  width: clamp(60px, 12vw, 80px);
   height: clamp(25px, 5vh, 30px);
   background: #1A2A44;
   color: #FFFFFF;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-  font-size: clamp(12px, 2vw, 14px);
+  font-size: clamp(10px, 1.8vw, 14px);
 }
 
 .chat-option:hover {
@@ -1384,80 +1089,100 @@ nav a:hover {
 }
 
 .blog-modal .modal-content {
-  width: clamp(300px, 90vw, 600px);
+  width: clamp(300px, 85vw, 600px);
   max-height: 80vh;
   background: #2E3B55;
-  padding: clamp(15px, 3vw, 20px);
+  padding: clamp(15px, 2vw, 20px);
   border-radius: 8px;
-  position: relative;
   overflow-y: auto;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .blog-modal .modal-close {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: clamp(20px, 4vw, 24px);
+  font-size: clamp(18px, 3.5vw, 24px);
   color: #FFFFFF;
   cursor: pointer;
-  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.blog-modal .modal-close:hover {
-  color: #D4AF37;
-  transform: rotate(90deg);
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  cursor: pointer;
+  z-index: 101;
 }
 
-.blog-modal .modal-content h2 {
-  font-size: clamp(20px, 4vw, 24px);
-  color: #FFFFFF;
-  margin-bottom: 15px;
+.burger-menu span {
+  width: 100%;
+  height: 2px;
+  background: #FFFFFF;
+  transition: all 0.3s ease;
 }
 
-.blog-modal .modal-content p {
-  font-size: clamp(14px, 2.5vw, 16px);
-  color: #B0B0B0;
+.burger-menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 4px);
 }
 
-/* Адаптивность для разных устройств */
+.burger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
 
-/* Маленькие телефоны (320px–576px) */
+.burger-menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+/* Медиа-запросы */
 @media (max-width: 576px) {
   .header {
-    flex-direction: column;
-    height: auto;
-    padding: 15px;
+    height: 40px;
+    padding: 0 10px;
+  }
+  .logo img {
+    width: 80px;
+  }
+  .burger-menu {
+    display: flex;
   }
   nav {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background: #1A2A44;
     flex-direction: column;
     align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    z-index: 100;
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  nav.active {
+    transform: translateY(0);
   }
   nav a {
     margin: 8px 0;
-  }
-  .carousel, .services-list, .portfolio-grid, .team, .certificate-items, .awards, .intro-benefits, .values, .testimonial-items, .social-links, .subscribe-form, .stats, .blog-posts {
-    flex-direction: column;
-    align-items: center;
-  }
-  .carousel-item, .service-item, .portfolio-item, .team-member, .certificate-item, .award-item, .benefit-item, .value-item, .testimonial-item, .subscribe-form input, .contact-form input, .contact-form textarea, .stat-item, .blog-item {
-    width: 100%;
+    font-size: 14px;
   }
   .hero, .about-hero, .portfolio-hero {
-    height: 350px;
-    padding-top: 80px;
+    height: 300px;
+    padding-top: 60px;
   }
   .hero h1, .about-hero h1, .portfolio-hero h1 {
-    font-size: 28px;
+    font-size: 24px;
   }
   .hero p, .about-hero p, .portfolio-hero p {
     font-size: 14px;
   }
-  .modal-content {
-    width: 90%;
-    max-width: 350px;
+  .carousel-item, .service-item, .portfolio-item, .team-member, .certificate-item, .award-item, .benefit-item, .value-item, .testimonial-item, .stat-item, .blog-item {
+    width: 100%;
+    max-width: 320px;
   }
-  .portfolio-modal .modal-content {
+  .modal-content {
     width: 90%;
     max-width: 350px;
   }
@@ -1468,32 +1193,12 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
   }
-  .footer .contacts, .footer .map {
-    text-align: center;
-  }
   .footer .map iframe {
     width: 100%;
     max-width: 250px;
   }
-  .about-history, .about-mission, .about-vision {
-    padding: 20px;
-  }
   .about-history img, .about-mission img, .about-vision img {
-    max-width: 100%;
     height: 200px;
-  }
-  .testimonial-item {
-    height: auto;
-    min-height: 180px;
-  }
-  .cta-section {
-    margin: 0 15px;
-  }
-  .form-input, .form-select {
-    max-width: 100%;
-  }
-  .filter {
-    gap: 8px;
   }
   .filter-btn {
     width: 90px;
@@ -1501,273 +1206,13 @@ nav a:hover {
   }
 }
 
-/* Стили для бургер-меню */
-.burger-menu {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 20px;
-  cursor: pointer;
-  z-index: 101;
-}
-
-.burger-menu span {
-  width: 100%;
-  height: 3px;
-  background: #FFFFFF;
-  transition: all 0.3s ease;
-}
-
-.burger-menu.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.burger-menu.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.burger-menu.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* Средние телефоны и маленькие планшеты (576px–768px) */
 @media (min-width: 576px) and (max-width: 768px) {
   .header {
-    flex-direction: column;
-    height: auto;
-    padding: 20px;
-  }
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
-  nav a {
-    margin: 10px 0;
-  }
-  .carousel, .services-list, .portfolio-grid, .team, .certificate-items, .awards, .intro-benefits, .values, .testimonial-items, .social-links, .subscribe-form, .stats, .blog-posts {
-    flex-direction: column;
-    align-items: center;
-  }
-  .carousel-item, .service-item, .portfolio-item, .team-member, .certificate-item, .award-item, .benefit-item, .value-item, .testimonial-item, .subscribe-form input, .contact-form input, .contact-form textarea, .stat-item, .blog-item {
-    width: 100%;
-  }
-  .hero, .about-hero, .portfolio-hero {
-    height: 400px;
-    padding-top: 100px;
-  }
-  .hero h1, .about-hero h1, .portfolio-hero h1 {
-    font-size: 32px;
-  }
-  .hero p, .about-hero p, .portfolio-hero p {
-    font-size: 16px;
-  }
-  .modal-content {
-    width: 90%;
-    max-width: 400px;
-  }
-  .portfolio-modal .modal-content {
-    width: 90%;
-    max-width: 400px;
-  }
-  .modal-image {
-    height: 200px;
-  }
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer .contacts, .footer .map {
-    text-align: center;
-  }
-  .footer .map iframe {
-    width: 100%;
-    max-width: 300px;
-  }
-  .about-history, .about-mission, .about-vision {
-    padding: 30px;
-  }
-  .about-history img, .about-mission img, .about-vision img {
-    max-width: 100%;
-    height: 250px;
-  }
-  .testimonial-item {
-    height: auto;
-    min-height: 200px;
-  }
-  .cta-section {
-    margin: 0 20px;
-  }
-  .form-input, .form-select {
-    max-width: 100%;
-  }
-  .filter {
-    gap: 10px;
-  }
-  .filter-btn {
-    width: 100px;
-    font-size: 12px;
-  }
-}
-
-/* Планшеты (768px–1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .header {
-    flex-direction: row;
-    padding: 0 30px;
-  }
-  nav {
-    flex-direction: row;
-  }
-  nav a {
-    margin-right: 15px;
-  }
-  .carousel, .services-list, .portfolio-grid, .team, .certificate-items, .awards, .intro-benefits, .values, .testimonial-items, .social-links, .subscribe-form, .stats, .blog-posts {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .carousel-item, .service-item, .portfolio-item, .team-member, .certificate-item, .award-item, .benefit-item, .value-item, .testimonial-item, .stat-item, .blog-item {
-    width: clamp(300px, 45vw, 350px);
-  }
-  .hero, .about-hero, .portfolio-hero {
-    height: 450px;
-    padding-top: 120px;
-  }
-  .hero h1, .about-hero h1, .portfolio-hero h1 {
-    font-size: 40px;
-  }
-  .hero p, .about-hero p, .portfolio-hero p {
-    font-size: 18px;
-  }
-  .modal-content {
-    width: 90%;
-    max-width: 600px;
-  }
-  .portfolio-modal .modal-content {
-    width: 90%;
-    max-width: 600px;
-  }
-  .modal-image {
-    height: 250px;
-  }
-  .footer-content {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .footer .contacts, .footer .map {
-    text-align: left;
-  }
-  .footer .map iframe {
-    width: 300px;
-  }
-  .about-history, .about-mission, .about-vision {
-    padding: 40px;
-  }
-  .about-history img, .about-mission img, .about-vision img {
-    max-width: 100%;
-    height: 300px;
-  }
-  .testimonial-item {
-    height: auto;
-    min-height: 220px;
-  }
-  .cta-section {
-    margin: 0 30px;
-  }
-  .form-input, .form-select {
-    max-width: 450px;
-  }
-  .filter {
-    gap: 12px;
-  }
-  .filter-btn {
-    width: 110px;
-    font-size: 13px;
-  }
-}
-
-/* Десктопы (1024px и выше) */
-@media (min-width: 1024px) {
-  .header {
-    padding: 0 50px;
-  }
-  nav {
-    flex-direction: row;
-  }
-  nav a {
-    margin-right: 20px;
-  }
-  .carousel, .services-list, .portfolio-grid, .team, .certificate-items, .awards, .intro-benefits, .values, .testimonial-items, .social-links, .subscribe-form, .stats, .blog-posts {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .carousel-item, .service-item, .portfolio-item, .team-member, .certificate-item, .award-item, .benefit-item, .value-item, .testimonial-item, .stat-item, .blog-item {
-    width: 350px;
-  }
-  .hero, .about-hero, .portfolio-hero {
-    height: 500px;
-    padding-top: 150px;
-  }
-  .hero h1, .about-hero h1, .portfolio-hero h1 {
-    font-size: 48px;
-  }
-  .hero p, .about-hero p, .portfolio-hero p {
-    font-size: 18px;
-  }
-  .modal-content {
-    width: 800px;
-  }
-  .portfolio-modal .modal-content {
-    width: 800px;
-  }
-  .modal-image {
-    height: 300px;
-  }
-  .footer-content {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .footer .contacts, .footer .map {
-    text-align: left;
-  }
-  .footer .map iframe {
-    width: 300px;
-  }
-  .about-history, .about-mission, .about-vision {
-    padding: 50px;
-  }
-  .about-history img, .about-mission img, .about-vision img {
-    max-width: 800px;
-    height: 400px;
-  }
-  .testimonial-item {
-    height: 250px;
-  }
-  .cta-section {
-    margin: 0 50px;
-  }
-  .form-input, .form-select {
-    max-width: 500px;
-  }
-  .filter {
-    gap: 15px;
-  }
-  .filter-btn {
-    width: 120px;
-    font-size: 14px;
-  }
-}
-@media (max-width: 576px) {
-  .header {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10px 15px;
     height: 50px;
+    padding: 0 20px;
   }
   .logo img {
-    width: 100px;
+    width: 90px;
   }
   .burger-menu {
     display: flex;
@@ -1783,17 +1228,51 @@ nav a:hover {
     transform: translateY(-100%);
     transition: transform 0.3s ease;
     z-index: 100;
-    padding: 10px 0;
-    max-height: 70vh;
-    overflow-y: auto;
+    padding: 15px 0;
   }
   nav.active {
     transform: translateY(0);
   }
-  nav a {
-    margin: 5px 0;
-    font-size: 14px;
-    padding: 5px 10px;
+  .hero, .about-hero, .portfolio-hero {
+    height: 350px;
+    padding-top: 80px;
   }
-  /* ... остальные стили ... */
+  .carousel-item, .service-item, .portfolio-item, .team-member, .certificate-item, .award-item, .benefit-item, .value-item, .testimonial-item, .stat-item, .blog-item {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    height: 50px;
+    padding: 0 30px;
+  }
+  .logo img {
+    width: 100px;
+  }
+  .burger-menu {
+    display: none;
+  }
+  .hero, .about-hero, .portfolio-hero {
+    height: 400px;
+    padding-top: 100px;
+  }
+  .carousel-item, .service-item, .portfolio-item, .team-member, .certificate-item, .award-item, .benefit-item, .value-item, .testimonial-item, .stat-item, .blog-item {
+    width: clamp(300px, 45vw, 350px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    height: 60px;
+    padding: 0 50px;
+  }
+  .burger-menu {
+    display: none;
+  }
+  .hero, .about-hero, .portfolio-hero {
+    height: 500px;
+    padding-top: 120px;
+  }
 }
