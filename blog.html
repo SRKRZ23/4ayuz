@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Блог 4ay.uz: статьи об IT, разработке, кибербезопасности и технологиях.">
+  <meta name="keywords" content="IT, блог, технологии, 4ay.uz">
   <title>Блог - 4ay.uz</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="preloader"><div class="preloader-logo">4ay.uz</div></div>
   <header class="header">
-    <div class="logo">4ay.uz</div>
+    <div class="logo"><img src="assets/logo.png" alt="4ay.uz" loading="lazy"></div>
     <nav>
       <a href="index.html">Главная</a>
       <a href="services.html">Услуги</a>
@@ -22,76 +24,30 @@
 
   <section class="blog-section">
     <h1>Наш блог</h1>
-    <p class="blog-intro">Читайте наши статьи о новейших технологиях, трендах в IT и успешных кейсах, которые мы реализовали для наших клиентов.</p>
-    <div class="blog-filter">
-      <button class="filter-btn active" data-category="all">Все</button>
-      <button class="filter-btn" data-category="ai">ИИ</button>
-      <button class="filter-btn" data-category="dev">Разработка</button>
-      <button class="filter-btn" data-category="cloud">Облачные решения</button>
-      <button class="filter-btn" data-category="security">Кибербезопасность</button>
-      <button class="filter-btn" data-category="ecommerce">E-commerce</button>
-    </div>
+    <p class="blog-intro">Читайте наши статьи о технологиях, разработке и кибербезопасности.</p>
     <div class="blog-posts">
-      <article class="blog-post" data-category="ai">
-        <img src="assets/blog1.webp" alt="Кейс 1">
-        <h2>Как мы ускорили бизнес на 30% с помощью ИИ</h2>
-        <p>Мы внедрили ИИ-решение для анализа клиентских данных, что позволило увеличить продажи на 30%. Узнайте, как это работает...</p>
-        <p><strong>Дата:</strong> 15 марта 2025</p>
-        <a href="#" class="read-more">Читать далее</a>
-      </article>
-      <article class="blog-post" data-category="dev">
-        <img src="assets/blog2.webp" alt="Кейс 2">
-        <h2>Кибербезопасность в 2025: Новые угрозы</h2>
-        <p>Какие угрозы ждут бизнес в 2025 году и как мы можем защитить ваши данные? Рассказываем о наших подходах...</p>
-        <p><strong>Дата:</strong> 10 февраля 2025</p>
-        <a href="#" class="read-more">Читать далее</a>
-      </article>
-      <article class="blog-post" data-category="cloud">
-        <img src="assets/blog3.webp" alt="Кейс 3">
-        <h2>Облачные технологии для бизнеса</h2>
-        <p>Как облачные решения помогают масштабировать бизнес и сокращать затраты? Наш опыт и рекомендации...</p>
-        <p><strong>Дата:</strong> 5 января 2025</p>
-        <a href="#" class="read-more">Читать далее</a>
-      </article>
-      <article class="blog-post" data-category="security">
-        <img src="assets/blog4.webp" alt="Кейс 4">
-        <h2>Защита данных в банках</h2>
-        <p>Мы внедрили систему кибербезопасности для крупного банка, что снизило риски утечек данных на 90%. Подробности...</p>
-        <p><strong>Дата:</strong> 20 декабря 2024</p>
-        <a href="#" class="read-more">Читать далее</a>
-      </article>
-      <article class="blog-post" data-category="ecommerce">
-        <img src="assets/blog5.webp" alt="Кейс 5">
-        <h2>AR в E-commerce: Будущее продаж</h2>
-        <p>Как дополненная реальность меняет онлайн-шопинг? Наш опыт внедрения AR в интернет-магазины...</p>
-        <p><strong>Дата:</strong> 15 ноября 2024</p>
-        <a href="#" class="read-more">Читать далее</a>
-      </article>
-      <article class="blog-post" data-category="ai">
-        <img src="assets/blog6.webp" alt="Кейс 6">
-        <h2>Как ИИ меняет техподдержку</h2>
-        <p>Наш опыт внедрения чат-ботов с ИИ для автоматизации техподдержки. Узнайте, как это работает...</p>
-        <p><strong>Дата:</strong> 10 октября 2024</p>
-        <a href="#" class="read-more">Читать далее</a>
-      </article>
-    </div>
-    <div class="blog-modal">
-      <div class="modal-content">
-        <span class="modal-close">×</span>
-        <h2></h2>
-        <p></p>
+      <div class="blog-item">
+        <h3>Как ИИ меняет бизнес в 2025 году</h3>
+        <p>Искусственный интеллект становится ключевым инструментом для автоматизации и аналитики. Узнайте, как внедрить ИИ в ваш бизнес.</p>
+      </div>
+      <div class="blog-item">
+        <h3>Топ-5 трендов кибербезопасности</h3>
+        <p>Узнайте о новых угрозах и способах защиты данных в 2025 году.</p>
+      </div>
+      <div class="blog-item">
+        <h3>Блокчейн: будущее финансов</h3>
+        <p>Как блокчейн-технологии меняют финансовую индустрию.</p>
       </div>
     </div>
-
-    <div class="subscribe-section">
-      <h2>Подпишитесь на наш блог</h2>
-      <p>Получайте новые статьи и новости прямо на вашу почту!</p>
-      <form class="subscribe-form">
-        <input type="email" placeholder="Ваш email" required>
-        <button type="submit" class="submit-btn">Подписаться</button>
-      </form>
-    </div>
   </section>
+
+  <div class="blog-modal">
+    <div class="modal-content">
+      <span class="modal-close">×</span>
+      <h2></h2>
+      <p></p>
+    </div>
+  </div>
 
   <footer class="footer">
     <div class="footer-content">
@@ -106,9 +62,18 @@
       </div>
     </div>
     <div class="socials">
-      <a href="#"><img src="assets/fb.svg" alt="Facebook"></a>
-      <a href="#"><img src="assets/insta.svg" alt="Instagram"></a>
-      <a href="#"><img src="assets/telegram.svg" alt="Telegram"></a>
+      <a href="#" class="social-link">
+        <img src="assets/fb.svg" alt="Facebook" onerror="this.src='assets/fb.png'; this.onerror=null; this.style.display='none';" loading="lazy">
+        <span class="social-text">Facebook</span>
+      </a>
+      <a href="#" class="social-link">
+        <img src="assets/insta.svg" alt="Instagram" onerror="this.src='assets/insta.png'; this.onerror=null; this.style.display='none';" loading="lazy">
+        <span class="social-text">Instagram</span>
+      </a>
+      <a href="#" class="social-link">
+        <img src="assets/telegram.svg" alt="Telegram" onerror="this.src='assets/telegram.png'; this.onerror=null; this.style.display='none';" loading="lazy">
+        <span class="social-text">Telegram</span>
+      </a>
     </div>
   </footer>
 
@@ -118,14 +83,14 @@
       <div class="chat-header">Чат с 4ay</div>
       <div class="chat-body"><p class="bot-message">Здравствуйте!</p></div>
       <div class="chat-footer">
-        <button class="chat-option" data-response="Оставьте заявку">Заявка</button>
+        <button class="chat-option" data-response="Заявка">Заявка</button>
         <button class="chat-option" data-response="Портфолио">Портфолио</button>
       </div>
     </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="scripts.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>

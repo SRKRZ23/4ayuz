@@ -1,145 +1,323 @@
-gsap.registerPlugin(ScrollTrigger);
-
-
 // Preloader
 const preloader = document.querySelector('.preloader');
 if (preloader) {
   window.addEventListener('load', () => {
-    gsap.to('.preloader-logo', { scale: 1.1, repeat: -1, yoyo: true, duration: 1 });
-    const minDisplayTime = new Promise(resolve => setTimeout(resolve, 2000));
-    Promise.all([minDisplayTime]).then(() => {
-      gsap.to(preloader, { opacity: 0, duration: 0.5, onComplete: () => preloader.classList.add('hidden') });
-    });
+    preloader.classList.add('hidden');
   });
 }
 
-// Hero анимация
-const heroH1 = document.querySelector(".hero h1");
-if (heroH1) {
-  gsap.from(heroH1, { y: 20, opacity: 0, duration: 0.7, ease: "power2.out" });
-}
-
-// Анимации для страниц
-const pageHeaders = document.querySelectorAll(".services-page h1, .portfolio-page h1, .about-page h1, .contacts-page h1, .blog-section h1");
-if (pageHeaders.length > 0) {
-  gsap.from(pageHeaders, { scrollTrigger: { trigger: ".services-page, .portfolio-page, .about-page, .contacts-page, .blog-section", start: "top 80%" }, y: 50, opacity: 0, duration: 0.7 });
-}
-
-const animatedItems = document.querySelectorAll(".carousel-item, .service-item, .portfolio-item, .stat-item, .contact-info, .blog-post");
-if (animatedItems.length > 0) {
-  gsap.from(animatedItems, { scrollTrigger: { trigger: ".carousel, .services-list, .portfolio-grid, .stats, .contact-info, .blog-posts", start: "top 80%" }, y: 30, opacity: 0, stagger: 0.2, duration: 0.5 });
-}
-
-// Блог модалка
-const readMoreLinks = document.querySelectorAll('.read-more');
-const blogModal = document.querySelector('.blog-modal');
-if (readMoreLinks.length > 0 && blogModal) {
-  const modalContent = blogModal.querySelector('.modal-content');
-  const modalClose = blogModal.querySelector('.modal-close');
-  let isAnimating = false;
-  readMoreLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      if (isAnimating) return;
-      isAnimating = true;
-      const post = link.closest('.blog-post');
-      modalContent.querySelector('h2').textContent = post.querySelector('h2').textContent;
-      modalContent.querySelector('p').textContent = post.getAttribute('data-full-text') || post.querySelector('p').textContent;
-      blogModal.style.display = 'flex';
-      gsap.fromTo('.modal-content', { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: 'power2.out', onComplete: () => isAnimating = false });
-    });
-  });
-  modalClose.addEventListener('click', closeModal);
-  blogModal.addEventListener('click', (e) => { if (e.target === blogModal) closeModal(); });
-  function closeModal() {
-    if (isAnimating) return;
-    isAnimating = true;
-    gsap.to('.modal-content', { scale: 0.8, opacity: 0, duration: 0.3, onComplete: () => { blogModal.style.display = 'none'; isAnimating = false; } });
-  }
-}
-
-// Фильтрация портфолио
-const filterButtons = document.querySelectorAll('.filter-btn');
-const portfolioItems = document.querySelectorAll('.portfolio-item');
-if (filterButtons.length > 0 && portfolioItems.length > 0) {
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      filterButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-      const category = button.getAttribute('data-category');
-      portfolioItems.forEach(item => {
-        const itemCategory = item.getAttribute('data-category');
-        if (category === 'all' || itemCategory === category) {
-          item.style.display = 'block';
-          gsap.from(item, { y: 20, opacity: 0, duration: 0.5 });
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    });
+// Header scroll effect
+const header = document.querySelector('.header');
+if (header) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
   });
 }
 
-// Фильтрация блога
-const blogFilterButtons = document.querySelectorAll('.blog-filter .filter-btn');
-const blogPosts = document.querySelectorAll('.blog-post');
-if (blogFilterButtons.length > 0 && blogPosts.length > 0) {
-  blogFilterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      blogFilterButtons.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-      const category = button.getAttribute('data-category');
-      blogPosts.forEach(post => {
-        const postCategory = post.getAttribute('data-category');
-        if (category === 'all' || postCategory === category) {
-          post.style.display = 'block';
-          gsap.from(post, { y: 20, opacity: 0, duration: 0.5 });
-        } else {
-          post.style.display = 'none';
-        }
-      });
-    });
-  });
-}
-
-// Чат-бот
+// Chat bot
 const chatIcon = document.querySelector('.chat-icon');
 const chatWindow = document.querySelector('.chat-window');
 if (chatIcon && chatWindow) {
-  const chatBody = document.querySelector('.chat-body');
-  const chatOptions = document.querySelectorAll('.chat-option');
   chatIcon.addEventListener('click', () => {
-    const isOpen = chatWindow.style.display === 'flex';
-    if (!isOpen) {
-      chatWindow.style.display = 'flex';
-      gsap.fromTo(chatWindow, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3 });
-    } else {
-      gsap.to(chatWindow, { scale: 0, opacity: 0, duration: 0.3, onComplete: () => chatWindow.style.display = 'none' });
-    }
+    chatWindow.style.display = chatWindow.style.display === 'flex' ? 'none' : 'flex';
+    gsap.from(chatWindow, { opacity: 0, y: 20, duration: 0.5, ease: 'power2.out' });
   });
-  chatOptions.forEach(button => {
-    button.addEventListener('click', () => {
-      const response = button.getAttribute('data-response');
+
+  const chatOptions = document.querySelectorAll('.chat-option');
+  chatOptions.forEach(option => {
+    option.addEventListener('click', () => {
+      const response = option.getAttribute('data-response');
+      const chatBody = document.querySelector('.chat-body');
       const message = document.createElement('p');
-      message.className = 'bot-message';
-      message.textContent = response;
+      message.classList.add('bot-message');
+      message.textContent = response === 'Заявка' ? 'Пожалуйста, оставьте свои данные, и мы свяжемся с вами!' : 'Вот ссылка на наше портфолио: [Портфолио](#)';
       chatBody.appendChild(message);
-      gsap.from(message, { y: 20, opacity: 0, duration: 0.5 });
-      setTimeout(() => chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: 'smooth' }), 100);
+      chatBody.scrollTop = chatBody.scrollHeight;
     });
   });
 }
 
-// Tooltips
-const tooltipItems = document.querySelectorAll('[data-tooltip]');
-if (tooltipItems.length > 0) {
-  tooltipItems.forEach(item => {
-    const tooltip = item.querySelector('.tooltip-text');
-    item.addEventListener('mouseenter', () => {
-      gsap.fromTo(tooltip, { y: 10, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3 });
+// Blog modal and animation
+const blogItems = document.querySelectorAll('.blog-item');
+const blogModal = document.querySelector('.blog-modal');
+const blogModalContent = document.querySelector('.blog-modal .modal-content');
+const blogModalClose = document.querySelector('.blog-modal .modal-close');
+
+if (blogItems.length > 0 && blogModal && blogModalContent && blogModalClose) {
+  // Логика модального окна
+  blogItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const title = item.querySelector('h3').textContent;
+      const text = item.querySelector('p').textContent;
+      blogModalContent.querySelector('h2').textContent = title;
+      blogModalContent.querySelector('p').textContent = text;
+      blogModal.style.display = 'flex';
+      gsap.from(blogModalContent, { opacity: 0, y: 50, duration: 0.5, ease: 'power2.out' });
     });
-    item.addEventListener('mouseleave', () => {
-      gsap.to(tooltip, { y: 10, opacity: 0, duration: 0.3 });
+  });
+
+  blogModalClose.addEventListener('click', () => {
+    gsap.to(blogModalContent, { opacity: 0, y: 50, duration: 0.5, ease: 'power2.out', onComplete: () => {
+      blogModal.style.display = 'none';
+    }});
+  });
+
+  blogModal.addEventListener('click', (e) => {
+    if (e.target === blogModal) {
+      gsap.to(blogModalContent, { opacity: 0, y: 50, duration: 0.5, ease: 'power2.out', onComplete: () => {
+        blogModal.style.display = 'none';
+      }});
+    }
+  });
+
+  // Анимация для blogItems (убираем stagger)
+  gsap.from(blogItems, {
+    scrollTrigger: {
+      trigger: '.blog-posts',
+      start: 'top 80%',
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power2.out',
+  });
+}
+
+// Portfolio animations (убираем stagger)
+const portfolioItems = document.querySelectorAll('.portfolio-item');
+if (portfolioItems.length > 0) {
+  gsap.from(portfolioItems, {
+    scrollTrigger: {
+      trigger: '.portfolio-grid',
+      start: 'top 80%',
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power2.out',
+  });
+}
+
+// Filter animation (убираем stagger в фильтрации)
+const filterButtons = document.querySelectorAll('.filter-btn');
+if (filterButtons.length > 0) {
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const filter = button.getAttribute('data-filter');
+      portfolioItems.forEach(item => {
+        const category = item.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
+          item.style.display = 'flex';
+          gsap.fromTo(item, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' });
+        } else {
+          gsap.to(item, { opacity: 0, y: 20, duration: 0.5, ease: 'power2.out', onComplete: () => {
+            item.style.display = 'none';
+          }});
+        }
+      });
+
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
     });
+  });
+}
+
+// Portfolio modal
+const portfolioModal = document.querySelector('.portfolio-modal');
+const portfolioModalContent = document.querySelector('.portfolio-modal .modal-content');
+const portfolioModalClose = document.querySelector('.portfolio-modal .modal-close');
+const portfolioModalImage = document.querySelector('.modal-image');
+const portfolioModalTitle = document.querySelector('.modal-title');
+const portfolioModalDescription = document.querySelector('.modal-description');
+const portfolioButtons = document.querySelectorAll('.portfolio-btn');
+
+if (portfolioModal && portfolioModalContent && portfolioModalClose && portfolioModalImage && portfolioModalTitle && portfolioModalDescription && portfolioButtons.length > 0) {
+  portfolioButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const item = button.closest('.portfolio-item');
+      const imgSrc = item.querySelector('img').src;
+      const title = item.getAttribute('data-title');
+      const description = item.getAttribute('data-description');
+
+      portfolioModalImage.src = imgSrc;
+      portfolioModalTitle.textContent = title;
+      portfolioModalDescription.textContent = description;
+      portfolioModal.style.display = 'flex';
+
+      gsap.from(portfolioModalContent, { opacity: 0, y: 50, duration: 0.5, ease: 'power2.out' });
+    });
+  });
+
+  portfolioModalClose.addEventListener('click', () => {
+    gsap.to(portfolioModalContent, { opacity: 0, y: 50, duration: 0.5, ease: 'power2.out', onComplete: () => {
+      portfolioModal.style.display = 'none';
+    }});
+  });
+
+  portfolioModal.addEventListener('click', (e) => {
+    if (e.target === portfolioModal) {
+      gsap.to(portfolioModalContent, { opacity: 0, y: 50, duration: 0.5, ease: 'power2.out', onComplete: () => {
+        portfolioModal.style.display = 'none';
+      }});
+    }
+  });
+}
+
+// Animations for other sections (убираем stagger)
+const testimonialItems = document.querySelectorAll('.testimonial-item');
+if (testimonialItems.length > 0) {
+  gsap.from(testimonialItems, {
+    scrollTrigger: {
+      trigger: '.testimonials, .portfolio-testimonials, .about-testimonials',
+      start: 'top 80%',
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power2.out',
+  });
+}
+
+const ctaSection = document.querySelector('.cta-section');
+if (ctaSection) {
+  gsap.from(ctaSection, {
+    scrollTrigger: {
+      trigger: '.cta-section',
+      start: 'top 80%',
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power2.out',
+  });
+}
+
+const benefitItems = document.querySelectorAll('.benefit-item');
+if (benefitItems.length > 0) {
+  gsap.from(benefitItems, {
+    scrollTrigger: {
+      trigger: '.intro-benefits',
+      start: 'top 80%',
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power2.out',
+  });
+}
+
+const carouselItems = document.querySelectorAll('.carousel-item');
+if (carouselItems.length > 0) {
+  gsap.from(carouselItems, {
+    scrollTrigger: {
+      trigger: '.carousel',
+      start: 'top 80%',
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power2.out',
+  });
+}
+
+const serviceItems = document.querySelectorAll('.service-item');
+if (serviceItems.length > 0) {
+  gsap.from(serviceItems, {
+    scrollTrigger: {
+      trigger: '.services-list',
+      start: 'top 80%',
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power2.out',
+  });
+}
+
+const teamMembers = document.querySelectorAll('.team-member');
+if (teamMembers.length > 0) {
+  gsap.from(teamMembers, {
+    scrollTrigger: {
+      trigger: '.team',
+      start: 'top 80%',
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power2.out',
+  });
+}
+
+const valueItems = document.querySelectorAll('.value-item');
+if (valueItems.length > 0) {
+  gsap.from(valueItems, {
+    scrollTrigger: {
+      trigger: '.values',
+      start: 'top 80%',
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power2.out',
+  });
+}
+
+const awardItems = document.querySelectorAll('.award-item');
+if (awardItems.length > 0) {
+  gsap.from(awardItems, {
+    scrollTrigger: {
+      trigger: '.awards',
+      start: 'top 80%',
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power2.out',
+  });
+}
+
+const certificateItems = document.querySelectorAll('.certificate-item');
+if (certificateItems.length > 0) {
+  gsap.from(certificateItems, {
+    scrollTrigger: {
+      trigger: '.certificate-items',
+      start: 'top 80%',
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power2.out',
+  });
+}
+
+const statItems = document.querySelectorAll('.stat-item');
+if (statItems.length > 0) {
+  gsap.from(statItems, {
+    scrollTrigger: {
+      trigger: '.stats',
+      start: 'top 80%',
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power2.out',
+  });
+}
+
+const faqItems = document.querySelectorAll('.faq-item');
+if (faqItems.length > 0) {
+  gsap.from(faqItems, {
+    scrollTrigger: {
+      trigger: '.contact-faq',
+      start: 'top 80%',
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power2.out',
   });
 }

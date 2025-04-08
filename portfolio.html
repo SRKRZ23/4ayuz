@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Портфолио IT-проектов от 4ay.uz: веб-разработка, мобильные приложения, ИИ, IoT, блокчейн и кибербезопасность.">
+  <meta name="keywords" content="IT, портфолио, проекты, 4ay.uz, разработка, кибербезопасность">
   <title>Портфолио - 4ay.uz</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="preloader"><div class="preloader-logo">4ay.uz</div></div>
   <header class="header">
-    <div class="logo">4ay.uz</div>
+    <div class="logo"><img src="assets/logo.png" alt="4ay.uz" loading="lazy"></div>
     <nav>
       <a href="index.html">Главная</a>
       <a href="services.html">Услуги</a>
@@ -20,114 +22,145 @@
     </nav>
   </header>
 
-  <section class="portfolio-page">
+  <section class="portfolio-hero">
     <h1>Наши проекты</h1>
-    <p class="portfolio-intro">Мы гордимся нашими проектами, которые помогли клиентам достичь новых высот в бизнесе. Вот некоторые из наших работ, демонстрирующие наш опыт в различных областях IT.</p>
+    <p>Мы гордимся каждым проектом, который помогает нашим клиентам достигать новых высот. Ознакомьтесь с нашими работами!</p>
+  </section>
+
+  <section class="portfolio-page">
     <div class="filter">
-      <button class="filter-btn active" data-category="all">Все</button>
-      <button class="filter-btn" data-category="ai">ИИ</button>
-      <button class="filter-btn" data-category="dev">Разработка</button>
-      <button class="filter-btn" data-category="cloud">Облачные решения</button>
-      <button class="filter-btn" data-category="security">Кибербезопасность</button>
-      <button class="filter-btn" data-category="ecommerce">E-commerce</button>
-      <button class="filter-btn" data-category="iot">IoT</button>
-      <button class="filter-btn" data-category="edu">Образование</button>
-      <button class="filter-btn" data-category="blockchain">Блокчейн</button>
-      <button class="filter-btn" data-category="analytics">Аналитика</button>
+      <button class="filter-btn active" data-filter="all">Все</button>
+      <button class="filter-btn" data-filter="web">Веб</button>
+      <button class="filter-btn" data-filter="mobile">Мобильные</button>
+      <button class="filter-btn" data-filter="ai">ИИ</button>
+      <button class="filter-btn" data-filter="iot">IoT</button>
+      <button class="filter-btn" data-filter="blockchain">Блокчейн</button>
+      <button class="filter-btn" data-filter="security">Безопасность</button>
     </div>
     <div class="portfolio-grid">
-      <div class="portfolio-item" data-category="ai">
-        <img src="assets/project1.webp" alt="AI-Driven CRM">
-        <h2>AI-Driven CRM для ритейла</h2>
-        <p>Разработали CRM-систему с искусственным интеллектом для крупной розничной сети. Система анализирует данные клиентов и предлагает персонализированные акции, что увеличило продажи на 30% за 6 месяцев.</p>
-        <p><strong>Технологии:</strong> Python, TensorFlow, React</p>
-        <p><strong>Клиент:</strong> "MegaRetail"</p>
+      <div class="portfolio-item" data-category="web" data-title="E-commerce платформа для ритейла" data-description="Разработали масштабируемую платформу для крупного ритейлера с интеграцией платежных систем и аналитики продаж. Проект включал разработку пользовательского интерфейса, интеграцию с API платежных систем и настройку аналитики для отслеживания продаж в реальном времени.">
+        <img src="assets/project1.webp" alt="E-commerce платформа" loading="lazy">
+        <div class="portfolio-content">
+          <h2>E-commerce платформа для ритейла</h2>
+          <p>Масштабируемая платформа с интеграцией платежных систем и аналитикой продаж.</p>
+          <button class="portfolio-btn">Подробнее</button>
+        </div>
       </div>
-      <div class="portfolio-item" data-category="dev">
-        <img src="assets/project2.webp" alt="Телемедицина">
-        <h2>Мобильное приложение для телемедицины</h2>
-        <p>Создано приложение для врачей и пациентов с поддержкой видеоконсультаций. Интеграция с медкартами и шифрование данных обеспечивают безопасность. Проект запущен в 3 регионах.</p>
-        <p><strong>Технологии:</strong> Flutter, Firebase, AES-256</p>
-        <p><strong>Клиент:</strong> "HealthCare"</p>
+      <div class="portfolio-item" data-category="web" data-title="Система управления складом" data-description="Автоматизировали управление складом для логистической компании, сократив время обработки заказов на 30%. Система включает модули для управления запасами, отслеживания заказов и интеграции с системами доставки.">
+        <img src="assets/project2.webp" alt="Система управления складом" loading="lazy">
+        <div class="portfolio-content">
+          <h2>Система управления складом</h2>
+          <p>Автоматизация склада, сокращение времени обработки заказов на 30%.</p>
+          <button class="portfolio-btn">Подробнее</button>
+        </div>
       </div>
-      <div class="portfolio-item" data-category="cloud">
-        <img src="assets/project3.webp" alt="Логистика">
-        <h2>Облачная платформа для логистики</h2>
-        <p>Развернули масштабируемую платформу на AWS для управления цепочками поставок. Реальное время отслеживания и аналитика сократили затраты клиента на 20%.</p>
-        <p><strong>Технологии:</strong> AWS, Docker, Node.js</p>
-        <p><strong>Клиент:</strong> "LogiTrans"</p>
+      <div class="portfolio-item" data-category="mobile" data-title="Мобильное приложение для фитнеса" data-description="Создано приложение с трекером тренировок, интеграцией с носимыми устройствами и персональными рекомендациями. Пользователи могут отслеживать свои тренировки, получать рекомендации по питанию и синхронизировать данные с умными часами.">
+        <img src="assets/project3.webp" alt="Мобильное приложение для фитнеса" loading="lazy">
+        <div class="portfolio-content">
+          <h2>Мобильное приложение для фитнеса</h2>
+          <p>Трекер тренировок с интеграцией носимых устройств и рекомендациями.</p>
+          <button class="portfolio-btn">Подробнее</button>
+        </div>
       </div>
-      <div class="portfolio-item" data-category="security">
-        <img src="assets/project4.webp" alt="Кибербезопасность">
-        <h2>Система кибербезопасности для банков</h2>
-        <p>Внедрили многоуровневую защиту для финансового сектора: обнаружение угроз, защита от DDoS-атак, шифрование данных. Проект успешно прошел аудит безопасности.</p>
-        <p><strong>Технологии:</strong> Splunk, OpenSSL, Kubernetes</p>
-        <p><strong>Клиент:</strong> "BankSafe"</p>
+      <div class="portfolio-item" data-category="ai" data-title="Чат-бот для техподдержки" data-description="Разработали ИИ-бота для автоматизации техподдержки, что сократило нагрузку на операторов на 40%. Бот обрабатывает запросы клиентов, предоставляет ответы на часто задаваемые вопросы и перенаправляет сложные запросы операторам.">
+        <img src="assets/project4.webp" alt="Чат-бот для техподдержки" loading="lazy">
+        <div class="portfolio-content">
+          <h2>Чат-бот для техподдержки</h2>
+          <p>ИИ-бот, сокративший нагрузку на операторов на 40%.</p>
+          <button class="portfolio-btn">Подробнее</button>
+        </div>
       </div>
-      <div class="portfolio-item" data-category="ecommerce">
-        <img src="assets/project5.webp" alt="E-commerce с AR">
-        <h2>E-commerce платформа с AR</h2>
-        <p>Онлайн-магазин с дополненной реальностью для примерки одежды и мебели. Увеличил конверсию на 15% благодаря интерактивному опыту.</p>
-        <p><strong>Технологии:</strong> Unity, Shopify, ARKit</p>
-        <p><strong>Клиент:</strong> "ShopAR"</p>
+      <div class="portfolio-item" data-category="web" data-title="Система аналитики для банка" data-description="Внедрили систему аналитики транзакций для банка, улучшив выявление мошенничества на 25%. Система использует машинное обучение для анализа транзакций и выявления подозрительных операций в реальном времени.">
+        <img src="assets/project5.webp" alt="Система аналитики для банка" loading="lazy">
+        <div class="portfolio-content">
+          <h2>Система аналитики для банка</h2>
+          <p>Аналитика транзакций, улучшившая выявление мошенничества на 25%.</p>
+          <button class="portfolio-btn">Подробнее</button>
+        </div>
       </div>
-      <div class="portfolio-item" data-category="ai">
-        <img src="assets/project6.webp" alt="Чат-бот">
-        <h2>Чат-бот с ИИ для техподдержки</h2>
-        <p>Интеллектуальный чат-бот для телеком-компании, который сократил нагрузку на колл-центр на 40%. Использованы NLP и интеграция с CRM.</p>
-        <p><strong>Технологии:</strong> Dialogflow, Node.js, Salesforce</p>
-        <p><strong>Клиент:</strong> "TelecomPlus"</p>
+      <div class="portfolio-item" data-category="web" data-title="Платформа для онлайн-курсов" data-description="Создали платформу для онлайн-обучения с поддержкой видеоуроков, тестов и аналитики прогресса. Платформа позволяет создавать курсы, проводить тестирование и отслеживать прогресс студентов.">
+        <img src="assets/project6.webp" alt="Платформа для онлайн-курсов" loading="lazy">
+        <div class="portfolio-content">
+          <h2>Платформа для онлайн-курсов</h2>
+          <p>Платформа с видеоуроками, тестами и аналитикой прогресса.</p>
+          <button class="portfolio-btn">Подробнее</button>
+        </div>
       </div>
-      <div class="portfolio-item" data-category="iot">
-        <img src="assets/project7.webp" alt="Умный дом">
-        <h2>Система управления умным домом</h2>
-        <p>IoT-решение для управления устройствами через мобильное приложение. Поддержка голосового управления и интеграция с Alexa.</p>
-        <p><strong>Технологии:</strong> MQTT, AWS IoT, Flutter</p>
-        <p><strong>Клиент:</strong> "SmartHome"</p>
+      <div class="portfolio-item" data-category="iot" data-title="IoT-система для умного дома" data-description="Разработали систему управления умным домом с интеграцией датчиков и мобильного приложения. Пользователи могут управлять освещением, температурой и безопасностью через приложение.">
+        <img src="assets/project7.webp" alt="IoT-система для умного дома" loading="lazy">
+        <div class="portfolio-content">
+          <h2>IoT-система для умного дома</h2>
+          <p>Управление умным домом с датчиками и мобильным приложением.</p>
+          <button class="portfolio-btn">Подробнее</button>
+        </div>
       </div>
-      <div class="portfolio-item" data-category="edu">
-        <img src="assets/project8.webp" alt="Онлайн-обучение">
-        <h2>Платформа для онлайн-обучения</h2>
-        <p>LMS с адаптивным обучением и аналитикой прогресса студентов. Использована для обучения 5000+ пользователей в образовательной компании.</p>
-        <p><strong>Технологии:</strong> Moodle, React, PostgreSQL</p>
-        <p><strong>Клиент:</strong> "EduTech"</p>
+      <div class="portfolio-item" data-category="blockchain" data-title="Блокчейн-платформа для цепочек поставок" data-description="Внедрили блокчейн для прозрачности цепочек поставок, обеспечив отслеживание товаров в реальном времени. Система позволяет отслеживать происхождение товаров и предотвращать подделки.">
+        <img src="assets/project8.webp" alt="Блокчейн-платформа для цепочек поставок" loading="lazy">
+        <div class="portfolio-content">
+          <h2>Блокчейн-платформа для цепочек поставок</h2>
+          <p>Прозрачность цепочек поставок с отслеживанием в реальном времени.</p>
+          <button class="portfolio-btn">Подробнее</button>
+        </div>
       </div>
-      <div class="portfolio-item" data-category="blockchain">
-        <img src="assets/project9.webp" alt="Блокчейн">
-        <h2>Блокчейн для цепочек поставок</h2>
-        <p>Решение на основе блокчейна для прозрачного отслеживания товаров. Сократило время проверки цепочки поставок на 50%.</p>
-        <p><strong>Технологии:</strong> Ethereum, Solidity, Node.js</p>
-        <p><strong>Клиент:</strong> "SupplyChainPro"</p>
+      <div class="portfolio-item" data-category="security" data-title="Система кибербезопасности для стартапа" data-description="Защитили стартап от киберугроз с помощью системы мониторинга и защиты данных. Система включает мониторинг угроз, защиту от DDoS-атак и шифрование данных.">
+        <img src="assets/project9.webp" alt="Система кибербезопасности для стартапа" loading="lazy">
+        <div class="portfolio-content">
+          <h2>Система кибербезопасности для стартапа</h2>
+          <p>Защита стартапа от киберугроз с мониторингом и шифрованием.</p>
+          <button class="portfolio-btn">Подробнее</button>
+        </div>
       </div>
-      <div class="portfolio-item" data-category="analytics">
-        <img src="assets/project10.webp" alt="Дашборд">
-        <h2>Аналитический дашборд для маркетинга</h2>
-        <p>Веб-приложение для анализа данных из соцсетей и рекламных кампаний с визуализацией в реальном времени. Ускорило принятие решений на 25%.</p>
-        <p><strong>Технологии:</strong> D3.js, React, Google Analytics</p>
-        <p><strong>Клиент:</strong> "MarketInsight"</p>
+      <div class="portfolio-item" data-category="mobile" data-title="Приложение для управления проектами" data-description="Разработали мобильное приложение для управления задачами и проектами с синхронизацией в реальном времени. Приложение позволяет создавать задачи, назначать исполнителей и отслеживать прогресс.">
+        <img src="assets/project10.webp" alt="Приложение для управления проектами" loading="lazy">
+        <div class="portfolio-content">
+          <h2>Приложение для управления проектами</h2>
+          <p>Управление задачами с синхронизацией в реальном времени.</p>
+          <button class="portfolio-btn">Подробнее</button>
+        </div>
       </div>
     </div>
 
-    <div class="portfolio-testimonials">
+    <section class="portfolio-testimonials">
       <h2>Отзывы о наших проектах</h2>
       <div class="testimonial-items">
         <div class="testimonial-item">
-          <p>"Проект с 4ay.uz изменил наш бизнес! Их решение для логистики сэкономило нам миллионы."</p>
-          <h3>Олег Сидоров, LogiTrans</h3>
+          <p>"Платформа для онлайн-курсов от 4ay.uz помогла нам увеличить вовлеченность студентов на 50%!"</p>
+          <h3>Анна Ковалёва, образовательная платформа</h3>
         </div>
         <div class="testimonial-item">
-          <p>"Чат-бот, разработанный 4ay.uz, стал настоящим спасением для нашей техподдержки."</p>
-          <h3>Екатерина Кузнецова, TelecomPlus</h3>
+          <p>"Система кибербезопасности спасла наш стартап от крупной атаки. Спасибо за профессионализм!"</p>
+          <h3>Игорь Петров, стартап</h3>
+        </div>
+        <div class="testimonial-item">
+          <p>"Чат-бот для техподдержки сократил время ответа клиентам. Отличная работа!"</p>
+          <h3>Елена Смирнова, IT-компания</h3>
+        </div>
+        <div class="testimonial-item">
+          <p>"Мобильное приложение для фитнеса стало хитом среди наших пользователей. Спасибо за креативность!"</p>
+          <h3>Алексей Морозов, фитнес-стартап</h3>
+        </div>
+        <div class="testimonial-item">
+          <p>"Система аналитики для банка помогла нам выявлять мошенничество быстрее. Очень довольны!"</p>
+          <h3>Мария Иванова, банковский сектор</h3>
         </div>
       </div>
-    </div>
+    </section>
 
     <div class="cta-section">
       <h3>Хотите реализовать свой проект?</h3>
-      <p>Свяжитесь с нами, и мы поможем воплотить ваши идеи в жизнь!</p>
+      <p>Свяжитесь с нами, и мы воплотим вашу идею в жизнь!</p>
       <a href="contacts.html" class="hero-btn">Связаться</a>
     </div>
   </section>
+
+  <div class="portfolio-modal">
+    <div class="modal-content">
+      <span class="modal-close">×</span>
+      <img src="" alt="Project Image" class="modal-image">
+      <h2 class="modal-title"></h2>
+      <p class="modal-description"></p>
+    </div>
+  </div>
 
   <footer class="footer">
     <div class="footer-content">
@@ -142,9 +175,18 @@
       </div>
     </div>
     <div class="socials">
-      <a href="#"><img src="assets/fb.svg" alt="Facebook"></a>
-      <a href="#"><img src="assets/insta.svg" alt="Instagram"></a>
-      <a href="#"><img src="assets/telegram.svg" alt="Telegram"></a>
+      <a href="#" class="social-link">
+        <img src="assets/fb.svg" alt="Facebook" onerror="this.src='assets/fb.png'; this.onerror=null; this.style.display='none';" loading="lazy">
+        <span class="social-text">Facebook</span>
+      </a>
+      <a href="#" class="social-link">
+        <img src="assets/insta.svg" alt="Instagram" onerror="this.src='assets/insta.png'; this.onerror=null; this.style.display='none';" loading="lazy">
+        <span class="social-text">Instagram</span>
+      </a>
+      <a href="#" class="social-link">
+        <img src="assets/telegram.svg" alt="Telegram" onerror="this.src='assets/telegram.png'; this.onerror=null; this.style.display='none';" loading="lazy">
+        <span class="social-text">Telegram</span>
+      </a>
     </div>
   </footer>
 
@@ -154,14 +196,14 @@
       <div class="chat-header">Чат с 4ay</div>
       <div class="chat-body"><p class="bot-message">Здравствуйте!</p></div>
       <div class="chat-footer">
-        <button class="chat-option" data-response="Оставьте заявку">Заявка</button>
+        <button class="chat-option" data-response="Заявка">Заявка</button>
         <button class="chat-option" data-response="Портфолио">Портфолио</button>
       </div>
     </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="scripts.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
