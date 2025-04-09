@@ -1,3 +1,22 @@
+// Бургер-меню
+const burgerMenu = document.querySelector('.burger-menu');
+const nav = document.querySelector('nav');
+
+if (burgerMenu && nav) {
+  burgerMenu.addEventListener('click', () => {
+    burgerMenu.classList.toggle('active');
+    nav.classList.toggle('active');
+  });
+
+  // Закрытие меню при клике на ссылку
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      burgerMenu.classList.remove('active');
+      nav.classList.remove('active');
+    });
+  });
+}
+
 // Preloader
 const preloader = document.querySelector('.preloader');
 if (preloader) {
@@ -48,7 +67,6 @@ const blogModalContent = document.querySelector('.blog-modal .modal-content');
 const blogModalClose = document.querySelector('.blog-modal .modal-close');
 
 if (blogItems.length > 0 && blogModal && blogModalContent && blogModalClose) {
-  // Логика модального окна
   blogItems.forEach(item => {
     item.addEventListener('click', () => {
       const title = item.querySelector('h3').textContent;
@@ -74,7 +92,6 @@ if (blogItems.length > 0 && blogModal && blogModalContent && blogModalClose) {
     }
   });
 
-  // Анимация для blogItems (убираем stagger)
   gsap.from(blogItems, {
     scrollTrigger: {
       trigger: '.blog-posts',
@@ -87,7 +104,7 @@ if (blogItems.length > 0 && blogModal && blogModalContent && blogModalClose) {
   });
 }
 
-// Portfolio animations (убираем stagger)
+// Portfolio animations
 const portfolioItems = document.querySelectorAll('.portfolio-item');
 if (portfolioItems.length > 0) {
   gsap.from(portfolioItems, {
@@ -102,7 +119,7 @@ if (portfolioItems.length > 0) {
   });
 }
 
-// Filter animation (убираем stagger в фильтрации)
+// Filter animation
 const filterButtons = document.querySelectorAll('.filter-btn');
 if (filterButtons.length > 0) {
   filterButtons.forEach(button => {
@@ -167,7 +184,7 @@ if (portfolioModal && portfolioModalContent && portfolioModalClose && portfolioM
   });
 }
 
-// Animations for other sections (убираем stagger)
+// Animations for other sections
 const testimonialItems = document.querySelectorAll('.testimonial-item');
 if (testimonialItems.length > 0) {
   gsap.from(testimonialItems, {
