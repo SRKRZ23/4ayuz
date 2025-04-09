@@ -64,13 +64,13 @@ body {
   width: clamp(80px, 15vw, 100px);
   height: auto;
   display: block;
-  margin: 0 auto; /* Центрирование логотипа */
+  margin: 0 auto;
 }
 
 nav {
   display: flex;
   align-items: center;
-  justify-content: center; /* Центрирование навигации */
+  justify-content: center;
 }
 
 nav a {
@@ -120,7 +120,7 @@ nav a:hover {
   height: clamp(250px, 50vh, 400px);
   text-align: center;
   padding-top: clamp(60px, 12vh, 100px);
-  padding-bottom: 0;
+  padding-bottom: clamp(20px, 5vh, 40px);
   background: url('assets/hero-bg.jpg') no-repeat center;
   background-size: cover;
   position: relative;
@@ -159,6 +159,12 @@ nav a:hover {
   z-index: 2;
 }
 
+.hero-btn-container {
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+}
+
 .hero-btn {
   width: clamp(150px, 30vw, 200px);
   height: clamp(40px, 8vh, 50px);
@@ -190,6 +196,7 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh; /* Для блога, чтобы страница была видна полностью */
 }
 
 .services-page h1 {
@@ -756,6 +763,9 @@ nav a:hover {
   border-radius: 12px;
   max-width: clamp(350px, 85vw, 600px);
   margin: 0 auto 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-form h2 {
@@ -768,16 +778,20 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  width: 100%;
+  max-width: 400px;
 }
 
 .form-input, .contact-form textarea {
   width: 100%;
+  max-width: 100%;
   border-radius: 8px;
   border: 2px solid #1A2A44;
   padding: 12px;
   font-size: clamp(12px, 2vw, 16px);
   background: #1A2A44;
   color: #FFFFFF;
+  box-sizing: border-box;
 }
 
 .contact-form textarea {
@@ -951,6 +965,36 @@ nav a:hover {
   font-size: clamp(10px, 1.8vw, 14px);
 }
 
+.blog-posts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(15px, 2vw, 30px);
+  flex-wrap: wrap;
+}
+
+.blog-item {
+  width: clamp(250px, 40vw, 350px);
+  height: clamp(180px, 30vw, 250px);
+  background: #2E3B55;
+  padding: clamp(10px, 2vw, 20px);
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog-item p {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+}
+
 /* Медиа-запросы */
 @media (max-width: 576px) {
   .header {
@@ -970,7 +1014,7 @@ nav a:hover {
     transform: translateY(-50%);
   }
   nav {
-    display: none; /* Скрываем навигацию по умолчанию */
+    display: none;
     position: absolute;
     top: 40px;
     left: 0;
@@ -983,7 +1027,7 @@ nav a:hover {
     z-index: 100;
   }
   nav.active {
-    display: flex; /* Показываем при активации */
+    display: flex;
     animation: slideDown 0.3s ease-in-out;
   }
   nav a {
